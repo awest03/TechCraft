@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "572446",
+    "ThreadId": "247649",
+    "Html": "\r\n<p>Does anyone have a smaller project file that would decouple all but the block generation and rendering?</p>\r\n<p>The sample code is a awesome resource for learning the code and exhibiting the engines possibilities,\r\n<br>\r\nbut it'd be nice if there was a really simple single project which could be included in a new solution without the need to replace the cameras , inputs etc.</p>\r\n<p>I guess ideally a compiled .dll would be the most error free, but I would be super happy with just the bare bones project necessary to get the engine running with no frills.</p>\r\n",
+    "PostedDate": "2011-02-25T20:49:39.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572641",
+    "ThreadId": "247649",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://techcraft.codeplex.com/workitem/1\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2011-02-26T13:53:03.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

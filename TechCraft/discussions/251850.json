@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "588992",
+    "ThreadId": "251850",
+    "Html": "<p>Can i just say that having started this project and left it orphaned on codeplex how awesome it is to see it develop a life of its own and grow into something new. Many thanks to enomi and the rest of you who are actively working on it - i love what you  guys are doing. I hope to have the time to begin contributing properly again at some point once i've completed the voxel based game i've been trying to write - for those of you that haven't seen it there is an early video here&nbsp;<a href=\"http://www.youtube.com/watch?v=n_M9JI8htJ4\">http://www.youtube.com/watch?v=n_M9JI8htJ4</a>,  the game itself will feature a chiptune soundtrack by this man&nbsp;<a href=\"http://soundcloud.com/yozfitz\">http://soundcloud.com/yozfitz</a>&nbsp;(give him some love for his tunes if you like them and tell him i sent you ;) - i'm mutatedmedia on soundcloud) - I should have a proper gameplay video  up soon, since my aim is to have something working in time for the Microsoft Dream Build Play competition, but trying to keep the frame rate up whilst rendering a cube world at such a small scale is a nightmare just from the number of polys being rendered  so it's slow work...</p>\n<p>The new direction code you've submitted enomi looks like an excellent base to build from - far cleaner and better written than mine i only wish i could steal some of it for my game but everything is wired around my original code style and i'm way too far  down the line to do anything radical now.</p>\n<p>Once the basic terrain rendering is sorted in techcraft - i've got a custom model and animation implementation for voxel based characters which could be cool (you can sort of see it in the video with the wizard waving his arms around) although how it would  work visually in a more blocky environment i don't know, but it could differentiate the engine from minecraft style mobs (somewhere i've also got an implementation of minecraft style mobs too that i converted from manic digger). I've also got instanced block  based particle effects which again could add something new (explosions in the video). &nbsp;I'm happy to send anyone the code for either if they want to work on doing something similar here although given the difference in the core engines there's a lot of rewriting  to make it work.</p>\n<p>Anyway as the title of the discussion says - It's awesome to see this project spring into life! Get that IRC channel or Steam Group going and i'll be on it too.</p>",
+    "PostedDate": "2011-03-30T11:43:06.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590812",
+    "ThreadId": "251850",
+    "Html": "<blockquote style=\"padding-bottom: 0px; font-style: italic; margin: 0.25em 1em 0px; padding-left: 0.25em; padding-right: 0.25em; padding-top: 0px; border: #ccc 0.1em solid;\"><strong>bamyazi wrote:</strong><br />\r\n<p>I'm happy to send anyone the code for either if they want to work on doing something similar here although given the difference in the core engines there's a lot of rewriting to make it work.</p>\r\n</blockquote>\r\n<p>mmmmh, lot of rewriting,&nbsp;just send it to me ! &nbsp;I wont&nbsp;work on this soon but&nbsp;you may get caught in another french trap for work or eaten by one of the numerous sharks that roam the north sea ;)&nbsp;</p>",
+    "PostedDate": "2011-04-02T20:07:05.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

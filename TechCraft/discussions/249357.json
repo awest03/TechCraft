@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "579163",
+    "ThreadId": "249357",
+    "Html": "\r\n<p>Posting this to try and instigate a discussion on the general project goals for TechCraft. Rather than having an adhoc development adding features here and there i think it would be worth having a think about what we're aiming to achieve with this engine.</p>\r\n<p>Personally i think it would be a good goal to have the TechCraft project develop as a generic engine which could be used for anything. This would basically mean moving any code which is game specific into separate libraries and developing a plugin type interface\r\n to allow individual games to override functionality such as region generation, player controllers etc.</p>\r\n<p>Any thoughts ??</p>\r\n",
+    "PostedDate": "2011-03-11T10:37:30.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "579168",
+    "ThreadId": "249357",
+    "Html": "<p>I agree with this idea. I had an initial look at this project and found it really impressive. However, after dabbling with it for a little while I found it too tightly bound to the elements that weren't related to the engine itself. As a result I was relegated to using your engine as an instructional guide more than a useful tool, for that I'm extremely grateful!</p>\r\n<p>If this were to be a generic implementation with clear hooks to allow for easy integration into any other project that would make it infinitely more appealing, to myself that is.</p>",
+    "PostedDate": "2011-03-11T10:43:55.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "579188",
+    "ThreadId": "249357",
+    "Html": "<p>Definitely follow this approach if possible.</p>\r\n<p>It opens many possibilities for the project to gain additional support. The engine itself is still in very early stages of development, and such a goal taken now, would save a rewrite or two later on to accommodate such features.</p>\r\n<p>An external XML type of configuration could allow for various engine options. An API also for access to functions. Some type of REST support for external communication with the engine. Such features could open the engine to many reuses in other projects.</p>",
+    "PostedDate": "2011-03-11T11:11:32.03-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "579200",
+    "ThreadId": "249357",
+    "Html": "<p>I think we already have the concept, we only need to do some clean up :</p>\r\n<ul>\r\n<li>TechcraftEngine project : generic engine</li>\r\n<li>Techcraft project : concrete example / demo / reference implementation</li>\r\n</ul>\r\n<p>Cleanup N#1 would be moving gameclient.cs from engine to techcraft project , maybe even into game.cs</p>\r\n<p>I would like an engine made from extracting reusable code from concrete projects, we could leverage the mercurial fork mechanism here on codeplex :</p>\r\n<ul>\r\n<li>When you start your project, you fork the full techcraft source, and you try to code only in your version of the TechCraft project, you try to not touch the engine.</li>\r\n<li>When you really need to modify the engine you can emit a pull request for us to incorporate your engine changes, or send a patch if you want to keep your source closed.</li>\r\n</ul>",
+    "PostedDate": "2011-03-11T11:39:33.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "579241",
+    "ThreadId": "249357",
+    "Html": "<p>I've discussed this with some people offline but i can't spend the time on this project to guide it in any way so i've given Enomi overall control..i'm happy to chip in my thoughts and contribute where i can but it's not my baby any more and it's up to you guys to use it or not as you see fit. I will be around to give any help i can but where you go with it is your choice :)</p>",
+    "PostedDate": "2011-03-11T13:03:15.073-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581849",
+    "ThreadId": "249357",
+    "Html": "<p>Just to keep you informed, I m currently&nbsp;trying to rewrite the engine from ground, based on my previous work in java + current codebase&nbsp;+ some other samples and articles about cube worlds.</p>\r\n<p>Expect some commits in&nbsp;2 weeks&nbsp;- I will work harder when&nbsp;I will have beaten dragon age 2 ;)</p>\r\n<p>In the mean time if you have some patches or anything relevant,&nbsp;do not hesitate to send it or just fork the source, I will look&nbsp;!</p>",
+    "PostedDate": "2011-03-16T19:32:12.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "583159",
+    "ThreadId": "249357",
+    "Html": "<p>Nice one enomi - let me know if there is anything i can do to help - i'm keen to keep involved in some way if i can - i'm still struggling to get the performance of my region loading code (the stuff i sent you) to work with the scale of blocks i'm trying to use in my DBP game... Happy to post over anything i come up with though if it might be of use here...</p>\r\n<p>If you're doing a full rewrite - a couple of people have mentioned to me that you can actually get better performance from this type of engine if you use DrawUserPrimatives rather than building a vertex buffer with SetData. I've noticed in timings from my game that my code to build a vertex buffer which is basically the SetData call takes as long as it does to construct the vertex list in the first place. Something like 120ms to build the list and another 120ms for the SetData call (which also calls list.ToArray() which may have an effect, but i've read that this just does a simple mem copy so shouldn't be significant) for a 96x32x96 region. (XBOX timings, on the PC it's down to less than 20ms on an onboard GPU). Could be worth doing some initial tests chucking a big vertex list/array at both and see which comes out best. I was going to try it, but i'm using Sunburn lighting and can't since it only supports building scenes from vertex buffers.</p>",
+    "PostedDate": "2011-03-19T15:46:35.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "583187",
+    "ThreadId": "249357",
+    "Html": "<p>DrawUserPrimatives -&nbsp;You already mentioned it, this is in my bookmarks / todo : &nbsp;<a href=\"http://forums.create.msdn.com/forums/p/5136/26987.aspx\">http://forums.create.msdn.com/forums/p/5136/26987.aspx</a></p>\r\n<p>But then I found this :&nbsp;<a href=\"http://nuclexframework.codeplex.com/wikipage?title=PrimitiveBatch&amp;referringTitle=Nuclex.Graphics\">http://nuclexframework.codeplex.com/wikipage?title=PrimitiveBatch&amp;referringTitle=Nuclex.Graphics</a>&nbsp;: Batching draw calls seems to be so efficient that drawuser vs draw becomes&nbsp;insignificant .</p>\r\n<p>Other subject : I managed to have a block struct storing the lightAmount and the blockType in one byte, so you can have 16 block types with 16 shades of light , or 32 block types and 8 shades.</p>\r\n<p>I think memory&nbsp;consumption&nbsp;may be even more a problem than processing power on the xbox, and this is the reason I m doing a rewrite : I want clean enough code to change fundamental things without breaking everything, and this implies separating the model ( chunk, world, block ) &nbsp;from rendering. I will look into sparse arrays too, we loose so much memory storing all these empty blocks in multiple arrays !</p>",
+    "PostedDate": "2011-03-19T21:16:28.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "585446",
+    "ThreadId": "249357",
+    "Html": "<p>breaking news&nbsp;!&nbsp;The rewrite is&nbsp;in good shape, the basics are here (clean model view separation, &nbsp;optimized drawing of blocks&nbsp;and moveable&nbsp;camera) . I have finally been able to use the code snippet from Bamyazi to simplify block faces removal&nbsp;and optimisation ( no more faceinfo class and associated big array of faceinfo).</p>\r\n<p>Next steps :</p>\r\n<p>1 - reimplement adding &amp; removing blocks</p>\r\n<p>2 - implement dynamic chunks ( infinite terrain )</p>\r\n<p>3 - reimplement trees &amp; water&nbsp;</p>\r\n<p>4&nbsp;- reimplement lighting</p>\r\n<p>5&nbsp;- reimplement collisions</p>\r\n<p>6 - ???</p>\r\n<p>7 - Profit ;)</p>\r\n<p>I will commit something&nbsp;next weekend (at least #1 , I hope to have&nbsp;#2)</p>\r\n<p>Here is a sneak peek at the classes structure :</p>\r\n<p><br />│&nbsp;&nbsp; Game1.cs<br />│&nbsp;&nbsp; Program.cs<br />│&nbsp;&nbsp; Tests.cs<br />├───controllers<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FirstPersonCameraController.cs<br />│<br />├───model<br />│&nbsp;&nbsp; │&nbsp;&nbsp; Block.cs<br />│&nbsp;&nbsp; │&nbsp;&nbsp; Chunk.cs<br />│&nbsp;&nbsp; │&nbsp;&nbsp; Vector3i.cs<br />│&nbsp;&nbsp; │&nbsp;&nbsp; World.cs<br />│&nbsp;&nbsp; │<br />│&nbsp;&nbsp; └───terrain<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FlatReferenceTerrain.cs<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IChunkBuilder.cs<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PerlinSimplexNoise.cs<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SimpleTerrain.cs<br />│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TerrainWithCaves.cs<br />│<br />└───view<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; Camera.cs<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ChunkRenderer.cs<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; FirstPersonCamera.cs<br />&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; WorldRenderer.cs<br />&nbsp;&nbsp;&nbsp; │<br />&nbsp;&nbsp;&nbsp; └───blocks<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BlockFaceDirection.cs<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BlockInformation.cs<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BlockTexture.cs<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VertexBlockRenderer.cs&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VertexPositionTextureShade.cs&nbsp;</p>",
+    "PostedDate": "2011-03-23T20:25:59.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "587357",
+    "ThreadId": "249357",
+    "Html": "<p>Rough version of the rewrite is now&nbsp;commited ( newTake project)</p>\r\n<p>I think the code is now more easy to follow, of&nbsp;course it's far from perfect and it lacks of standardizartion (&nbsp;public fields,&nbsp; undescore notation vs use of this. etc ... )&nbsp;&nbsp;but I have been able to correct some little mistakes like having one copy of the texures uv mapping for each chunk, and&nbsp;I&nbsp;reimplemented the block faces removal.</p>\r\n<p>There is block adding and digging ( mouse only, not event tried to support the xbox for now) , directly in the game1 class ( I did not design any player class,&nbsp;but it will come&nbsp;&nbsp;)</p>\r\n<p>And there is a first prototype of infinite world&nbsp; : Remove a block on the X increasing direction ( try all sides ! ) and you ll get a new generated chunk !</p>\r\n<p>&nbsp;No multithreading and just one chunk, and only on X increasing direction&nbsp;but &nbsp;if you remove another block at the end you ll get one more chunks, rinse and repeat untill memory is full !</p>\r\n<p>&nbsp;Chunks are stored in a 2d sparseMatrix, implemented with a dictionary&lt;int, dictionary&lt;int,Chunk&gt;&gt;. It's interesting because you can now add&nbsp;new chunks anywhere&nbsp;in this&nbsp;'infinite array' without any array ranges copies, while keeping coherent coordinates ( so array position&nbsp;is a factor&nbsp;of chunk position in 3d space) . In the current commited code you can even&nbsp;have&nbsp;negative coordinates like viewableChunks[-1,0] but i plan to replace int&nbsp;with unsigned int and start at <strong style=\"background: #adff2f;\">uint.MaxValue </strong>/ 2 ( or maybe ushorts, 65535 * 65535 chunks is enough i think ! ). Negative coordinates mess the block picking and require&nbsp;some Math.Abs() in a lot of&nbsp;places, its annoying.&nbsp;</p>\r\n<p>Having a custom data structure for chunks instead of a plain array&nbsp;opens the way to&nbsp;some crazy gameplay ideas, like&nbsp;circular worlds,&nbsp;other planets (with a&nbsp;3d sparse array), other dimensions&nbsp;( 4d&nbsp;sparse array&nbsp;;), and some&nbsp;good technical&nbsp;ideas too like compressing data of far away chunks&nbsp;instead of just nullifying / &nbsp;dumping to disk.&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n<p>read the code, it will be&nbsp;more understandable ;)</p>\r\n<p>btw it's so rough that there may be mouse grabbing issues and&nbsp;you can&nbsp;only quit with alt f4, but i did respect my &nbsp;objective of commiting something this&nbsp;weekend so enjoy !&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-03-27T18:59:28.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "939449",
+    "ThreadId": "402643",
+    "Html": "\r\n<p>I downloaded the Techcraft engine and I have found it really glitchy. A lot of chunks do not get rendered properly or built, and it is very laggy in its building process. After hours of perusing through source code, I built a new engine from scratch in three\r\n days and here is the result:</p>\r\n<p>&nbsp;</p>\r\n<p>http://www.youtube.com/watch?v=l3CcDdoBBZM&amp;feature=plcp</p>\r\n<p>&nbsp;</p>\r\n<p>I used three threads each for building and generation and it is fully infinite in 3dimensions. Hope it gives some inspiration. I suggest you queue regions into the queues instead of individual blocks.</p>\r\n",
+    "PostedDate": "2012-11-09T17:56:11.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "939467",
+    "ThreadId": "402643",
+    "Html": "<p>What lighting is on your engine? Hard to tell since the fog seems to start about an inch from the near plane.&nbsp;</p>\r\n<p>Techcraft does a light&nbsp;propagation&nbsp;from sunlight and lights in the world itself which is a large part of the chunk generation. Its certainly not bug free and it does need threading added but its not as bad as you are making out.&nbsp;</p>\r\n<p>Its great that you added the 3rd dimension... but it turns out that unless you are in space thats not a huge deal.</p>\r\n<p>Hopefully you were inspired by Techcraft enough to share your source too ;-)</p>",
+    "PostedDate": "2012-11-09T20:12:12.893-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "939469",
+    "ThreadId": "402643",
+    "Html": "<p>&nbsp;</p>\r\n<p>It does not have any lighting as I am currently working on adding creatures and humans, etc. But you can take a little look at some of the source, as well as try it out.</p>\r\n<p>Source:</p>\r\n<p>http://www.mediafire.com/?0z0aywa6bi812dh</p>\r\n<p>Test:</p>\r\n<p>http://www.mediafire.com/?q9jtlwfnlikcdzk</p>",
+    "PostedDate": "2012-11-09T20:42:41.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "939611",
+    "ThreadId": "402643",
+    "Html": "<p>Thanks, that's interesting, and for once there is actual source code not only promises ;)&nbsp;</p>\r\n<p>Lighting is really the hard part, propagating light across chunks correctly in the good generation order is hard.</p>\r\n<p>But having participated in few other engine projects, and even having&nbsp;abandoned&nbsp;our medieval fantasy style techcraft based game to restart a space game one year after, I advise you to concentrate on gameplay prototyping.</p>\r\n<p>Continue to do your creatures and humans thing, forget about threads and lighting for a while !</p>",
+    "PostedDate": "2012-11-10T08:26:43.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "989509",
+    "ThreadId": "402643",
+    "Html": "\r\n<p>I agree with your comment enomi that actual gameplay development is more valuable that devoting attention to the engine itself.</p>\r\n<p>I would encourage followers of this project, to use this Techcraft engine as it is, and play with it. Come up with gameplay ideas and see how much fun it is to simply build on what we have provided here.</p>\r\n<p>Adding in game functions, such as menus, a gui, some score system aren't that hard. Microsoft provided free examples of these (look up the XNA Game State Management and Platformer Starter Kit code from them).</p>\r\n<p>Good luck!</p>\r\n",
+    "PostedDate": "2013-01-20T22:50:17.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "993172",
+    "ThreadId": "402643",
+    "Html": "\r\n<p>So, I have just noticed that a lot of people are downloading the source code from this discussion.</p>\r\n<p>I just want to point out to everyone that this source is INCREDIBLY OLD AND BUGGY. If you haven't figured it out already, this is not optimised at all and is just horrible. If you start looking at it and attempting to follow through with what I am doing,\r\n you are screwing yourself in the long run. I know. I scrapped this entire engine for a better one. Trust me. Don't try this at home kids. Leave it to the professionals.</p>\r\n",
+    "PostedDate": "2013-01-28T10:01:47.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "993425",
+    "ThreadId": "402643",
+    "Html": "\r\n<p>I have to agree on some of your points czaloj, namely that the source is a few years old, and not optmised. The games which have been released include optimised versions of this engine, that the authors themselves have coded.</p>\r\n<p>Myself, enomi and bamyazi continued to improve on this TechCraft engine privately to the present day. We hope one day, to add back many of the optimisations and improvements we have done to this open source version.</p>\r\n<p>In the meantime again, we encourage anyone to look at this source code, and feel free to start discussions on this board. We would be only glad to help where we can, if possible.</p>\r\n<p>If someone is looking for a clean, small, and of course unoptimised technique for procedural seed voxel terrain (infinite world), look at commit&nbsp;<a id=\"ChangeSetLink15\" title=\"View change set 2acaf7e56694\" href=\"http://techcraft.codeplex.com/SourceControl/changeset/2acaf7e56694\">2acaf7e56694</a>&nbsp;on\r\n the 1st April 2011 for example.&nbsp;</p>\r\n",
+    "PostedDate": "2013-01-28T22:04:46.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "993860",
+    "ThreadId": "402643",
+    "Html": "I think he was talking about his own engine and mediafire code drop,<br>\r\nbut it applies anyway :)<br>\r\n<br>\r\nOn Tue, Jan 29, 2013 at 1:04 AM, [email removed] wrote:<br>\r\n&gt; From: jacoo2<br>\r\n&gt;<br>\r\n&gt; I have to agree on some of your points czaloj, namely that the source is a<br>\r\n&gt; few years old, and not optmised. The games which have been released include<br>\r\n&gt; optimised versions of this engine, that the authors themselves have coded.<br>\r\n&gt;<br>\r\n&gt; Myself, enomi and bamyazi continued to improve on this TechCraft engine<br>\r\n&gt; privately to the present day. We hope one day, to add back many of the<br>\r\n&gt; optimisations and improvements we have done to this open source version.<br>\r\n&gt;<br>\r\n&gt; In the meantime again, we encourage anyone to look at this source code, and<br>\r\n&gt; feel free to start discussions on this board. We would be only glad to help<br>\r\n&gt; where we can, if possible.<br>\r\n&gt;<br>\r\n&gt; If someone is looking for a clean, small, and of course unoptimised<br>\r\n&gt; technique for procedural seed voxel terrain (infinite world), look at commit<br>\r\n&gt; 2acaf7e56694 on the 1st April 2011 for example.<br>\r\n&gt;<br>\r\n&gt; Read the full discussion online.<br>\r\n&gt;<br>\r\n&gt; To add a post to this discussion, reply to this email<br>\r\n&gt; ([email removed])<br>\r\n&gt;<br>\r\n&gt; To start a new discussion for this project, email<br>\r\n&gt; [email removed]<br>\r\n&gt;<br>\r\n&gt; You are receiving this email because you subscribed to this discussion on<br>\r\n&gt; CodePlex. You can unsubscribe or change your settings on codePlex.com.<br>\r\n&gt;<br>\r\n&gt; Please note: Images and attachments will be removed from emails. Any posts<br>\r\n&gt; to this discussion will also be available online at codeplex.com",
+    "PostedDate": "2013-01-29T13:47:36.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "994003",
+    "ThreadId": "402643",
+    "Html": "\r\n<p>Maybe so. If we get the time soon Enomi, let's try to put a few updates into this TechCraft project again. Some of the feature requests in another discussion thread here might be a start.</p>\r\n",
+    "PostedDate": "2013-01-30T00:10:00.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

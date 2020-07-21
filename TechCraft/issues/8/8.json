@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "reimplement the old FPS counter and graph statistics  + something new dumping all interesting timings to a file",
+    "LastUpdatedDate": "2017-11-28T06:57:26.37-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-03-31T07:19:11.883-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Implement performance measurement facility and performance unit tests",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 3,
+    "Id": 8
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

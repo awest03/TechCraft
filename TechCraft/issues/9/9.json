@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2011-04-28T17:42:39.157-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Requires having finished rendering around camera/player",
+    "LastUpdatedDate": "2011-04-28T17:42:39.157-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-03-31T07:20:40.253-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Collisions and player movement",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 9
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

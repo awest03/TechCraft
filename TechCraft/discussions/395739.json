@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "913317",
+    "ThreadId": "395739",
+    "Html": "\r\n<p>Hey folks,</p>\r\n<p>I got the source here and try to figure out how it works.<br>\r\nSo far I think I understand the basics, but what I don't get is how the Engine takes out the Textures out of the blocks.png inside the EngineContent-Project.<br>\r\nI need to know this, because I have an idea for a game which I want to build on the base of the TechCraft and I want to put some new blocks in there.</p>\r\n<p>Hope someone can help...!</p>\r\n<p>&nbsp;</p>\r\n<p>Greetings from Germany</p>\r\n",
+    "PostedDate": "2012-09-16T14:55:05.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "913526",
+    "ThreadId": "395739",
+    "Html": "\r\n<p>Look inside <strong>ThreadedWorldRenderer.cs</strong><span>&nbsp;&nbsp;</span>for this line in\r\n<strong>LoadContent</strong></p>\r\n<pre>_textureAtlas = content.Load&lt;Texture2D&gt;(&quot;Textures\\\\blocks_APR28_3&quot;);</pre>\r\n<p>Replace that with a similar 8x8 atlas, and your new block textures will be used.</p>\r\n<p>Don't forget to put your newer PNG file in the Textures folder, recompile. If you're referring instead to how to create specific new blocks, and not just textures, reply, and i'll explain. I wasn't too sure what your exact question was.</p>\r\n",
+    "PostedDate": "2012-09-17T05:51:15.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

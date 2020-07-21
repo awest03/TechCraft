@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "524023",
+    "ThreadId": "235229",
+    "Html": "\r\n<p>Bamyazi,</p>\r\n<p>When I run the most recent source code in Visual C# 2010 Express I get the following errors;</p>\r\n<p>&nbsp;</p>\r\n<p>Error&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; Metadata file 'C:\\Users\\Ash\\Desktop\\TechCraft\\TechCraftEngine\\bin\\x86\\Debug\\TechCraftEngine.dll' could not be found&nbsp;&nbsp;&nbsp; TechCraft</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Error&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; Errors compiling C:\\Users\\Ash\\Desktop\\TechCraft\\TechCraftEngine\\Content\\Effects\\ParticleEffect.fx:<br>\r\nC:\\Users\\Ash\\Desktop\\TechCraft\\TechCraftEngine\\Content\\Effects\\ParticleEffect.fx(173,20): error X3000: syntax error: unexpected token 'VertexShader'&nbsp;&nbsp;&nbsp; C:\\Users\\Ash\\Desktop\\TechCraft\\TechCraftEngine\\Content\\Effects\\ParticleEffect.fx&nbsp;&nbsp;&nbsp;\r\n 173&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; TechCraftEngine</p>\r\n<p>&nbsp;</p>\r\n<p>Is there any obvious reason? I suspect i'm just being stupid, only immediate difference I can see I'm using the Express edition but I doubt that's the case.</p>\r\n<p>&nbsp;</p>\r\n<p>Any pointers?</p>\r\n<p>Thanks</p>\r\n<p>-Ferret</p>\r\n",
+    "PostedDate": "2010-11-18T13:20:23.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "544699",
+    "ThreadId": "235229",
+    "Html": "\r\n<p>I have the same problem. Any solution for this?</p>\r\n<p>-Magnus</p>\r\n",
+    "PostedDate": "2011-01-06T01:26:50.443-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570299",
+    "ThreadId": "235229",
+    "Html": "<p>Converting to xna4 took me 3 hours, with http://www.nelxon.com/blog/xna-3-1-to-xna-4-0-cheatsheet/ and http://blogs.msdn.com/b/shawnhar/archive/2010/04/19/vertex-data-in-xna-game-studio-4-0.aspx, and little 3d experience (opengl in java) but no xna experience.</p>\r\n<p>The tricky part is making VertexPositionTextureShade implement IVertexType by&nbsp; adding</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static readonly VertexDeclaration VertexDeclaration = new VertexDeclaration(VertexElements);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VertexDeclaration IVertexType.VertexDeclaration { get { return VertexDeclaration; } }</p>\r\n<p>just after the VertexElements part.</p>\r\n<p>It's a good exercise to understand the code so I wont post the zip (unless someone asks politely ;)</p>",
+    "PostedDate": "2011-02-22T10:08:10.077-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570531",
+    "ThreadId": "235229",
+    "Html": "<p>Hey enomi, could you post the zip? &nbsp;I tried a couple times to upgrade to XNA 4 and I failed everytime. &nbsp;I keep getting&nbsp;error X3000: syntax error: unexpected token 'VertexShader' in&nbsp;TechCraft\\TechCraftEngine\\Content\\Effects\\ParticleEffect.fx<span> </span>173<span> </span>20<span> </span>TechCraftEngine also. &nbsp;Does anyone have a 4.0 example?</p>",
+    "PostedDate": "2011-02-22T17:15:19.447-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570538",
+    "ThreadId": "235229",
+    "Html": "<p>Err actually fixed the shader error but does your game appear normal after you did all the XNA 3 to 4 updates? &nbsp;My game does NOT look normal.</p>",
+    "PostedDate": "2011-02-22T17:41:37.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570549",
+    "ThreadId": "235229",
+    "Html": "<p>maybe you did the same mistake&nbsp;I did : put blendstate.additive instead of opaque. there&nbsp;should be absolutely no blendstate.additive in the code. nelxon.com guidelines were a bit misleading but you need to think 2 minutes about what additive blending is . But it makes a good see through walls / over exposed white balance&nbsp;mod :)</p>\r\n<p>&nbsp;&nbsp;For now I just need to fix the particles, currently I replaced point sprites with lines blindly so I get ... &nbsp;lines :) But the code&nbsp;is a copy paste of the microsoft particles example ( +&nbsp;3 lines for fog ) and there is an xna4.0 port of this same example on app hub, so it would be manageable I think.</p>\r\n<p>Thanks to Bamyazi for this great piece of code (And thanks to infiniminer authors for the initial codebase ! )</p>",
+    "PostedDate": "2011-02-22T18:36:25.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570576",
+    "ThreadId": "235229",
+    "Html": "<p>Post some source, lets upgrade this project to 4.0</p>",
+    "PostedDate": "2011-02-22T20:38:17.953-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "571232",
+    "ThreadId": "235229",
+    "Html": "<p>Done, in patch section ! I even upgraded the particle system from the xna4 sample and added or tweaked some minor things like flying or no trees underwater :)</p>\n<p><a href=\"http://techcraft.codeplex.com/SourceControl/list/patches\">http://techcraft.codeplex.com/SourceControl/list/patches</a></p>",
+    "PostedDate": "2011-02-23T19:12:29.893-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "571306",
+    "ThreadId": "235229",
+    "Html": "<p>Damn looks really good was able to run it. &nbsp;Going to dive into in a bit.</p>",
+    "PostedDate": "2011-02-23T23:32:16.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

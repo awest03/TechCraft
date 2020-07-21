@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "989127",
+    "ThreadId": "430136",
+    "Html": "\r\n<p>Hello there,</p>\r\n<p>did anyone think about how to code minecraft like animations? For example opening and closing chest animation? I wrote my own voxel based engine. That engine have for every chunk some vertex buffers (for solid, liquid etc...). These buffers are rebuilded\r\n with every change (someone change solid block =&gt; rebuild solid block buffer). But i have no idea how to implement to this structure smooth animation of some blocks without rebuilding buffer several times per second (it would take much time on CPU) i think\r\n that's not the right way to achieve this. Someone have some idea?</p>\r\n",
+    "PostedDate": "2013-01-19T08:16:39.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "989507",
+    "ThreadId": "430136",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Objects such as in game chests, might be better separated from the chunk buffers. In game objects aren't a part of the world per se, but rather population objects within the world. So the separation of both makes logical sense.</p>\r\n<p>You could create buffers for game objects, and simply update and draw them after the world is generated each frame. In the Techcraft code, this can be seen in the water buffer, which is displayed after the solid blocks. The update and draw calls you make,\r\n could be animation of the game objects.</p>\r\n",
+    "PostedDate": "2013-01-20T22:44:17.653-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "664108",
+    "ThreadId": "270596",
+    "Html": "\r\n<p>I simply changed the type of chunk to add to a flower and though that it would recalculate the lighting it does, but it does not propogate the lighting to other chunks besides the one the flower is in. &nbsp;Any ideas?</p>\r\n<p>&nbsp;</p>\r\n<p>If I remove a block from the adjacent chunk then it populates the new lighting. &nbsp;I thought that the light&nbsp;propagated&nbsp;outside the current chunk at least from what I looked at the code I thought it did. &nbsp;The terrain generates with flowers\r\n on it and they light across chunks just fine.</p>\r\n",
+    "PostedDate": "2011-08-26T15:17:26.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

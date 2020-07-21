@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1022885",
+    "ThreadId": "438438",
+    "Html": "Very nice project! I decided to use TechCraft in an Avatar sandbox game I have been working on for the XBox. I had a basic engine developed, but I decided to scrap it since TechCraft seems to be further along as far as efficiency. ( I was using an Octree whereas the regions (Chunks) seems to be a better solution) I seemed to be hitting a wall at around 300k blocks on the XBox.<br />\n<br />\nA couple things I noticed about the engine.<br />\nBlock Types as enum - Block types have to be hard-coded in the engine. Makes things less extensible.<br />\n<br />\nBlocks have loose definition in the engine - It would be neat if a &quot;Block&quot; could contain additional attributes more easily. (IE Health, Behaviors, face/texture definitions) There would need to be quite a bit changed directly in the engine to achieve this right now. ( Block class that contains Type and other attributes instead of just storing the Block Type alone in the Block array for a region).<br />\n<br />\nI will be contributing the map editor source for my game as soon as I get to playtest. I don't know if anyone will find it useful or not, but if you would like to create static savable/loadable maps, it may come in handy ;)<br />\n",
+    "PostedDate": "2013-03-29T06:28:10.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1023792",
+    "ThreadId": "438438",
+    "Html": "Hi glad to hear the engine is useful\r<br />\n<br />\nYes i agree that the block type enum is limiting - its a trade off since having the blocks externally defined means the chunk generation would become more complex since if the blocks are defined externally how would it know what blocks to use as grass or even if a grass block exists...i'm sure there are ways around that but having the enum keeps it simple.\r<br />\n<br />\nthe block struct is intentionally kept as small as possible to conserve memory for a view distance of 8 (a 16x16 chunk world) there are 8388608 blocks at 5 bytes per block that's 40mb of data....unless it strictly HAS to be in the block struct i'd try and keep anything that is not uniquely modifiable on a per block basis in the block information.\r<br />\n<br />\nGood luck with the game - let us know when it gets into playtest - i've got a creators club membership so will put have a play<br />\n",
+    "PostedDate": "2013-04-01T07:51:06.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

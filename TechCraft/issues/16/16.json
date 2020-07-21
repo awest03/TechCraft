@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Here the code : NewTake.model.terrain.SimpleTerrain.cs\r\n\r\npublic virtual void BuildTree(Chunk chunk, byte tx, byte ty, byte tz)\r\n        {\r\n\r\n            // Trunk\r\n            byte height = (byte)(4 + (byte)r.Next(6));\r\n            if ((ty + height) < Chunk.MAX.Y)\r\n            {\r\n                for (byte y = ty; y < ty + height; y++)\r\n                {\r\n                    chunk.setBlock(tx, y, tz, new Block(BlockType.Tree));\r\n                }\r\n            }\r\n\r\n            // Foliage\r\n            int leavesheight = (int)(height * 0.65f); // 0.65f ~ 2/3\r\n            int count = 1;\r\n\r\n            for (int i = height; i > (height - leavesheight); i--)\r\n            {\r\n                for (int j = 1; j <= count; j++)\r\n                {\r\n                    int total = GetNumberLeaf(j);\r\n                    double angle = (Math.PI + Math.PI) / total;\r\n                    for (int k = 0; k < total; k++)\r\n                    {\r\n                        float xt = (float)(Math.Round(Math.Sin(angle * k), 2)) * count;\r\n                        if (xt > (int)xt) xt = (int)xt + 1;\r\n                        if (xt < (int)xt) xt = (int)xt - 1;\r\n                        if (xt != 0)\r\n                        {\r\n                            if (xt > 0)\r\n                                xt = (int)(j % xt);\r\n                            else\r\n                                xt = -(int)(j % xt);\r\n                        }\r\n\r\n\r\n                        float zt = (float)(Math.Round(Math.Cos(angle * k), 2)) * count;\r\n                        if (zt > (int)zt) zt = (int)zt + 1;\r\n                        if (zt < (int)zt) zt = (int)zt - 1;\r\n                        if (zt != 0)\r\n                        {\r\n                            if (zt > 0)\r\n                                zt = (int)(j % zt);\r\n                            else\r\n                                zt = -(int)(j % zt);\r\n                        }\r\n                            \r\n\r\n                        int index = (int)((tx + xt) * Chunk.FlattenOffset + (tz + zt) * Chunk.SIZE.Y + (ty + i));\r\n                        if (index > 0 && index <= chunk.Blocks.Length && chunk.Blocks[index].Type == BlockType.None)\r\n                            chunk.setBlock((byte)(tx + xt), (byte)(ty + i), (byte)(tz + zt), new Block(BlockType.Leaves));\r\n                    }\r\n                }\r\n\r\n                //set leaves width\r\n                count++;\r\n                if (count > 4)\r\n                {\r\n                    count = 4;\r\n                }\r\n            }\r\n\r\n        }\r\n\r\n        private int GetNumberLeaf(int i)\r\n        {\r\n            int num = 1;\r\n            for (int k = 1; k < i; k++)\r\n            {\r\n                num += 2;\r\n            }\r\n            return num * num;\r\n        }",
+    "LastUpdatedDate": "2012-11-24T18:26:37.757-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-10-04T20:39:16.21-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "New tree build ( so it's dirty but maybe good if edit something )",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 16
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

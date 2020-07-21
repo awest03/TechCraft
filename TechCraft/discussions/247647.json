@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "572444",
+    "ThreadId": "247647",
+    "Html": "\r\n<p>Hi guys / gals,</p>\r\n<p>Would it be possible to create terrain or portions of terrain (&quot;regions?&quot;) that have specific topology/flora/landmarks?</p>\r\n<p>I'm thinking I'd like to be able to say have a config file or some other way of directing the engine to in certain areas make very specific structures and landmarks.</p>\r\n<p>Is this possible with this engine? would that break the whole concept of a voxel based engine?</p>\r\n",
+    "PostedDate": "2011-02-25T20:46:32.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572528",
+    "ThreadId": "247647",
+    "Html": "<p>Sorry I guess in my excitement I started asking n00bish questions before I even looked at the examples/code.<br />I had a look at the flatTerrain sample and I think I understand now how to generate specific terrain etc.<br />Thanks!</p>",
+    "PostedDate": "2011-02-26T05:35:49.46-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572638",
+    "ThreadId": "247647",
+    "Html": "<p>Very good idea, there is for example the minecraft biometerrain mod that tweaks minecraft code to add underwater lakes, move the snow line or even add some rifts . If they achieved it on minecraft without the source code we sure can achieve something !</p>\r\n<p>But first we need a solid region system .</p>",
+    "PostedDate": "2011-02-26T13:46:39.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572642",
+    "ThreadId": "247647",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://techcraft.codeplex.com/workitem/2\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2011-02-26T13:55:23.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

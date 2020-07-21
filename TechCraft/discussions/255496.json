@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "603905",
+    "ThreadId": "255496",
+    "Html": "\r\n<p>Hey guys I'm new the project and like what I see. &nbsp;Looks like a lot of work so far and a lot more fun to be had. &nbsp;But I noticed that when I went to mod the texture map it I couldn't use Minecraft maps; the blocks are not in the right order. &nbsp;I'd\r\n like to suggest we support minecraft texture maps. &nbsp;A contribution I'd be happy to make myself.</p>\r\n",
+    "PostedDate": "2011-04-27T19:56:54.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "603914",
+    "ThreadId": "255496",
+    "Html": "<p>Welcome !</p>\r\n<p>We had this discussion already, and even some code on an old fork&nbsp;from a contributer (ycatse) . &nbsp;</p>\r\n<p>The problem is we dont want to end up with minecraft s blocktype class, having a workbench and a furnace in our game engine ! And we would like to avoid license problems ( commiting the code with a texture from a minecraft mod&nbsp;was a mistake ).</p>\r\n<p>So i got a suggestion for you : write a Minecraft-&gt;Techcraft Texture import/conversion tool . Just something that goes from one blocktype order to another, or go crazy and make it a full program with drag and drop UI&nbsp;&nbsp;!</p>",
+    "PostedDate": "2011-04-27T20:16:01.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "603922",
+    "ThreadId": "255496",
+    "Html": "<p>An import tool is a good idea. &nbsp;I'll see what I can do. &nbsp;I'm pretty swamped at work at the moment so don't expect anything too wild just yet. :)</p>",
+    "PostedDate": "2011-04-27T21:08:53.253-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "604003",
+    "ThreadId": "255496",
+    "Html": "<p>As enomi said we won't directly support minecraft texture packs, however in the latest source i've increased the size of our texture library to 16x16 blocks - which gives us room for more block types but should mean it's easier for you to do some sort of import tool.</p>",
+    "PostedDate": "2011-04-28T01:56:24.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

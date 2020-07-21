@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "633205",
+    "ThreadId": "262844",
+    "Html": "\r\n<p>Hello guys!</p>\r\n<p>First, I'd like to thank you for great work that you've done so far, it really helped me understand whole concept :) I have question regarding dynamic lights - is it possible with this engine? I dream of a possibility to carry torch instead of putting it\r\n as a static object. I understand how light works in TechCraft and thats its propagated through &quot;air&quot; None type blocks and then compiled into one amout for sun and for local light (flowers) when vertex list is built. This is where I see the problem - calculating\r\n a light radius for a moving target is not as bad as need to recreate whole chunk mesh to supply new light values to VertexPositionTextureLight vertices.&nbsp;</p>\r\n<p>I warn you that I just returned to 3D engines after 12 years of not doing any code so I'm rusty and have no idea how things like dynamic lights are done nowdays, especially in XNA. So I kindly ask for some help regarding this topic - is it possible to do\r\n without need to recompile chunk mesh? If so, how? I tried Googling the topic but I havent found many things that would push me forward with this.&nbsp;</p>\r\n<p>This is about torches, but it would be virtually any point light source thats moving - starting from burning objects, to some glowing worms :) So far TC light implementation is very good for &quot;static&quot; light that doesnt change often.</p>\r\n<p>Regards,</p>\r\n<p>K.</p>\r\n",
+    "PostedDate": "2011-06-26T12:22:14.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "634634",
+    "ThreadId": "262844",
+    "Html": "<p>As the engine stands it won't support dynamic lights. Currently the lighting is faked and only calculated when a block is added or removed. To do what you are suggesting and to enable a substantial number of dynamic lights you would need to use deferred rendering. In an early version of the techcraft engine i used exactly this approach&nbsp;<a href=\"http://www.youtube.com/watch?v=ZgRmn0rQUIs\">http://www.youtube.com/watch?v=ZgRmn0rQUIs</a>&nbsp;using a 3rd party lighting/rendering engine&nbsp;<a href=\"http://www.synapsegaming.com/\">http://www.synapsegaming.com/</a>. There are however some performance issues which come up when you switch to deferred rendering in that the scene is renderered multiple times per frame to generate the lighting.&nbsp;</p>\r\n<p>Implementing sunburn in techcraft is relatively straight forward and mainly consists of switching the engine to maintain sunburn sceneobjects rather than vertex buffers.&nbsp;</p>\r\n<p>One nice thing you could add very easily is a player torch - simply pass the torch position and intensity into the shader and modify the light values based on distance from the torch and the torch intensity.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-06-29T02:15:42.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "634840",
+    "ThreadId": "262844",
+    "Html": "<p>Thanks for reply!&nbsp;</p>\r\n<p>Thats what I was afraid of :( I had a vision of really nice feature with that dynamic lights - nothing fancy really but movable torches that could be dropped or carried by characters would add very nice immersion to the game. Sad to hear its only possible with deferred rendering :( Player torch is nice, but won't be the same as possibility to see some light cast by other player in dungeon carrying a torch, ehh. There is no way to improve current engine to only recalculate part of mesh / lighting instead of whole chunk for example? Torch has pretty limited range, it could be 3-4 blocks away, so maybe it would be possible? Or I'm missing something here.</p>\r\n<p>Guess I will have to do with whats possible then.</p>",
+    "PostedDate": "2011-06-29T08:27:22.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "635540",
+    "ThreadId": "262844",
+    "Html": "<p>To do what you're thinking of is pretty straight forward using an engine like sunburn. The code changes are relatively simple - i've got some old code kicking around with a very early version of this engine which uses sunburn for lighting. There is still active development going on with the engine at the moment on a private fork for the time being, but more dynamic lighting is something i'd love to have. &nbsp;I'll post any ideas i get, but other than using deferred rendering i can't think of anything atm.</p>",
+    "PostedDate": "2011-06-30T11:14:59.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "635595",
+    "ThreadId": "262844",
+    "Html": "<p>Thanks, I will be looking here from time to time in case anyone has any idea how to solve it :) And I will look into Sunburn too, did you use that free trial version or Indie or higher license?</p>",
+    "PostedDate": "2011-06-30T12:23:46.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "645196",
+    "ThreadId": "262844",
+    "Html": "<p>Here's an idea: pass the position of the light source and the light range (of the torch) to the shader, and shader side, make the faces brighter if it's within range of the light.</p>",
+    "PostedDate": "2011-07-20T14:19:08.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "598823",
+    "ThreadId": "254282",
+    "Html": "\r\n<p>It s active in the last commit,&nbsp;really experimental and&nbsp;I&nbsp;did not have the time to profile. Only saves the blocktype, one chunk for one file in c:\\techcraft .</p>\r\n<p>My idea was to have all the saving and loading done transparently in a specialized dictionary structure ( chunkmanager) , by overriding the accessor/index this[x,z]&nbsp;and remove method.</p>\r\n<p>The remove method works fine to save the chunk to disk,&nbsp;but the loading was not working&nbsp;because when&nbsp;we&nbsp;generate a chunk we have other things to to do, wich are done in the generate method. So I commented&nbsp;&nbsp;&#65279;the&#65279; chunkmanager\r\n loading, and I did put the loading in the generate method.</p>\r\n<p>Maybe the list of chunkrender in worldrender is getting in the way and we should rework this part.</p>\r\n<p>I did not work on the N S E W chunks, maybe tomorrow if noone else beats me to it.</p>\r\n",
+    "PostedDate": "2011-04-17T20:24:20.573-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

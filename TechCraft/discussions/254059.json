@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "597926",
+    "ThreadId": "254059",
+    "Html": "\r\n<p>For a bit of fun try adding the following line to the shader</p>\r\n<p>output.Position.y -= output.Distance * output.Distance * 0.0005f;</p>\r\n<p>directly after this line</p>\r\n<p>output.Distance = length(CameraPosition - worldPosition);</p>\r\n<p>This will create a spherical world with an artifical horizon by offsetting the y coordinate of vertices based on the distance from the camera. You'll need a fairly big world size to see the effect properly. You can modify the offset amount by increasing/decreasing\r\n 0.0005f.</p>\r\n",
+    "PostedDate": "2011-04-15T06:53:51.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598300",
+    "ThreadId": "254059",
+    "Html": "<p>that s really cool. try with 0.005 with current default view distance to see the effect.</p>\n<p>try 0.05&nbsp;with player physics : very cute . Then&nbsp;press F1 to enter free cam mode : you ll&nbsp;throw up !</p>\n<p>With this and with&nbsp;some sort of circular array (a specialized class of dictionary2) &nbsp;the world&nbsp;can be round.&nbsp;</p>\n<p>Edit : current in use effect is LightingAOBlockEffect.fx</p>",
+    "PostedDate": "2011-04-15T20:18:14.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,13 @@
+
+# Origins
+
+- Infiniminer source
+
+- Bamyazi optimization working on xbox with texture atlas
+
+- NewTake project : rewrite, still not feature complete with focus on clean code
+
+You can even check my previous work in java here : [http://ardor3d.com/forums/viewtopic.php?f=7&t=959](http://ardor3d.com/forums/viewtopic.php?f=7&t=959)  there are 2 zips to download , 
+the newbie voxel engine  ( drawing all cubes faces)  and the rookie voxel engine (drawing only faces touching air) , a good learning experience . 
+
+There you ll see the origins of the NewTake design. 

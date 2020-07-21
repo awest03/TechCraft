@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "<@BamYazi> re. occlusion culling - slaihne uses 6 vertex buffers per chunk - one per each face direction, then each frame you only submit the vertex buffers for visible faces. \r\nI can see this working on PC's, but the reason i went for a single vertex buffer in original techcraft is\r\n that the XBOX sucks for draw calls but has a massive fill rate so overdraw or culling is faster on the GPU.\r\n I wouldn't bother at the moment but once the\r\nBuild/Generate stuff is in place it would be straight forward to do a renderer which uses this technique\r\n",
+    "LastUpdatedDate": "2012-09-10T21:33:23.65-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-04-11T11:43:58.717-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "occlusion culling",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 13
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "http://www.gamedev.net/topic/580927-aabb-terrain-occlusion-culling/",
+      "PostedDate": "2011-04-11T11:44:50.75-07:00",
+      "Id": 33967
+    }
+  ]
+}

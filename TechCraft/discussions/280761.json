@@ -1,0 +1,162 @@
+[
+  {
+    "Id": "703109",
+    "ThreadId": "280761",
+    "Html": "\r\n<p>(Updating this post as of 16.03.2012)</p>\r\n<p>Hi there guys</p>\r\n<p>As you may know/remember I was working on a seperate block engine called voxeliq (voxlr at the time being). I'm progressing a lot and wanted to share few assets here.</p>\r\n<p>First of all, I got inspired by techcraft engine a lot though my codebase is completely different then techcraft (and I remember contributing to a few tiny features to techcraft from my codebase - like flatten array technique)</p>\r\n<p>Anyway, I've taken huge progress with my engine and now even techniques used differs from techcraft a lot. Techcraft is using array of blocks per chunks (which my engine was also using it for a long while) though I've now changed it to a single huge block\r\n array. And this led to great optimizations. If you want to technical reasons behind, I'm blogging about them on my dev-blog over\r\n<a href=\"http://www.voxeliq.org/\">http://www.voxeliq.org/</a></p>\r\n<ul>\r\n<li>Youtube:&nbsp;<a href=\"http://www.youtube.com/voxeliq\">http://www.youtube.com/voxeliq</a>\r\n</li><li>Dev-Blog:&nbsp;<a href=\"http://www.voxeliq.org/\">http://www.voxeliq.org/</a> </li></ul>\r\n<ul>\r\n<li><a href=\"https://github.com/raistlinthewiz/voxeliq\">https://github.com/raistlinthewiz/voxeliq</a>\r\n</li><li><a href=\"https://voxeliq.codeplex.com/\">https://voxeliq.codeplex.com/</a> </li></ul>\r\n<p>Anyway here's a few videos and screenshots from current revision;</p>\r\n<p><strong>Screenshot: </strong><img src=\"http://i.imgur.com/cZCTt.jpg\" alt=\"\"></p>\r\n<p><strong>Videos</strong></p>\r\n<p><a href=\"http://www.youtube.com/voxeliq\">http://www.youtube.com/voxeliq</a></p>\r\n<p><strong>Status</strong></p>\r\n<p>The engine is closed source right now and I'm still not sure if I'll go open source one day. Still I'm looking for people interested in to help the project, artist, music composers or even developers so we may go for an indie game using it. Message me please\r\n if you're interested.</p>\r\n",
+    "PostedDate": "2011-11-24T11:38:27.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703111",
+    "ThreadId": "280761",
+    "Html": "<p>Hey old friend, of course we remember you. Ourselves (= the new team) we have closed sourced our things and are still working on it.&nbsp;</p>\r\n<p>It will be interesting to read your code !&nbsp;</p>",
+    "PostedDate": "2011-11-24T11:44:02.097-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703150",
+    "ThreadId": "280761",
+    "Html": "<p>Oh hi there!,</p>\r\n<p>any chances that i can hit u back in irc?</p>",
+    "PostedDate": "2011-11-24T13:59:21.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703250",
+    "ThreadId": "280761",
+    "Html": "<div>Hi there!</div>\n<div>How have you been?</div>",
+    "PostedDate": "2011-11-24T23:45:23.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703255",
+    "ThreadId": "280761",
+    "Html": "<p>nice i'd like to get in contact with you guys.</p>",
+    "PostedDate": "2011-11-24T23:51:54.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806551",
+    "ThreadId": "280761",
+    "Html": "<p>I've updated the voxeliq website:&nbsp;<a href=\"http://www.voxeliq.org/\">http://www.voxeliq.org/</a></p>",
+    "PostedDate": "2012-03-06T16:10:16.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806787",
+    "ThreadId": "280761",
+    "Html": "<p>Great. Good luck with the voxeliq engine</p>",
+    "PostedDate": "2012-03-07T04:25:36.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806790",
+    "ThreadId": "280761",
+    "Html": "<p>So I guess you guys no more work on techraft or any similar?</p>",
+    "PostedDate": "2012-03-07T04:27:17.043-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806799",
+    "ThreadId": "280761",
+    "Html": "<p>There hasn't been much activity around Techcraft. It would be interesting to add in some missing features to this project at some time in the near future.</p>",
+    "PostedDate": "2012-03-07T04:32:27.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806808",
+    "ThreadId": "280761",
+    "Html": "<p>Nice maybe you want to check voxeliq too?&nbsp;</p>",
+    "PostedDate": "2012-03-07T04:41:58.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806810",
+    "ThreadId": "280761",
+    "Html": "<p>Sure. How would I do that?</p>",
+    "PostedDate": "2012-03-07T04:44:20.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806813",
+    "ThreadId": "280761",
+    "Html": "<p>sent u a pm!</p>",
+    "PostedDate": "2012-03-07T04:49:06.657-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811428",
+    "ThreadId": "280761",
+    "Html": "<p>I've updated the first message..</p>",
+    "PostedDate": "2012-03-16T07:19:51.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812035",
+    "ThreadId": "280761",
+    "Html": "<p>Hello raistlin/bonesoul, like I like to call you :)&nbsp;</p>\r\n<p>Saw your blog &amp; forum, this is very nice ! Nice graphical explanations and all. Fun thing, I'm an ipBoard expert now, using it at work, with SSO and custom skinning, the full monty !</p>\r\n<p>Im still working on a cube engine (in fact in last months i didn't have time, but i'm still in the private project), it's effectively using the big array like Slaihne (on the client side at least ... )</p>\r\n<p>Just one question, is voxeliq open source or closed source now ?</p>",
+    "PostedDate": "2012-03-17T21:28:05.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812355",
+    "ThreadId": "280761",
+    "Html": "<p>In the last minute I decided to keep it closed source for a while and so effectively it's closed sourced right now.&nbsp;</p>\r\n<p>Heh IPBoard is a great community framework :)</p>",
+    "PostedDate": "2012-03-19T01:55:13.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "973321",
+    "ThreadId": "280761",
+    "Html": "\r\n<ul>\r\n<li><a href=\"https://github.com/raistlinthewiz/voxeliq\">https://github.com/raistlinthewiz/voxeliq\r\n</a></li><li><a href=\"https://voxeliq.codeplex.com/\">https://voxeliq.codeplex.com/ </a></li></ul>\r\n",
+    "PostedDate": "2012-12-26T02:23:21.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "976621",
+    "ThreadId": "280761",
+    "Html": "\r\n<p>Cool ,</p>\r\n<p>I downloaded the source, opened the XNA sln, debug, but I m not able to run it, unable to find skydome fbx .&nbsp;</p>\r\n",
+    "PostedDate": "2012-12-26T08:03:24.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "976660",
+    "ThreadId": "280761",
+    "Html": "\r\n<p>Please issue an git pull origin master and retry. Fixed the projects;<a rel=\"nofollow\" href=\"https://github.com/raistlinthewiz/voxeliq/commit/840e8eeaeb29a6f708ebd6ec5c50d3eb4c4ef0d9\">https://github.com/raistlinthewiz/voxeliq/commit/840e8eeaeb29a6f708ebd6ec5c50d3eb4c4ef0d9</a></p>\r\n",
+    "PostedDate": "2012-12-26T08:14:33.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "977065",
+    "ThreadId": "280761",
+    "Html": "\r\n<p>Works now. But IMO the current build doesn't show the quality of your engine :&nbsp;</p>\r\n<p>- way too much Blur ( a toggle to reduce disable it would be nice !)&nbsp;</p>\r\n<p>- very small view/ number of chunks, and no apparent way to increase it (some keys to increase maybe)</p>\r\n<p>- Missing indication of keyboard shortcuts &nbsp;for fly & fog (just write fly(f1) )&nbsp;</p>\r\n<p>- Missing a shadow on text to be able to read it on white background&nbsp;</p>\r\n<p>- tree leaves are in column as a trunk, really weird !&nbsp;</p>\r\n<p>I m sure you have a very optimized code you just need to show it :)&nbsp;</p>\r\n",
+    "PostedDate": "2012-12-26T09:51:56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "977119",
+    "ThreadId": "280761",
+    "Html": "\r\n<p>- aggree on blur :)</p>\r\n<p>- just updated the chunk range :)</p>\r\n<p>- keyboard hints should be over your console :)</p>\r\n<p>- working atm on graphs and stats code to improve visuals</p>\r\n<p>- ignore them, wasn't complete yet.</p>\r\n<p>Just git pull origin master please :)</p>\r\n",
+    "PostedDate": "2012-12-26T10:02:23.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1058061",
+    "ThreadId": "447377",
+    "Html": "I simply cannot find the section of the code that actually renders the texture to the face of a cube. <br />\n\r<br />\nIts a but frustrating, hours of searching through tutorials, and none of them describe efficiently, or how for that matter, how to draw multiple textures to a cube. Thank you for the source code, it is very helpful, but I do wish there were more comments!\r<br />\n<br />\nSo... Could someone show me what class/method or effect applies the textures while drawing? Please and thank you very much!<br />\n",
+    "PostedDate": "2013-06-18T01:09:09.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1067968",
+    "ThreadId": "447377",
+    "Html": "Unfortunately Im still learning the code myself (and the details of XNA/c#)... but first thing - depends on whether you are looking at the NewTake (newer but not finished) code or the TechCraft code (older but more complete).<br />\n<br />\nTechCraft:  I think the textures are assigned via the Effects parameters.  Have a look at the line as follows in TechCraft4.0Engine\\WorldEngine\\World.cs:<br />\n<pre><code>_solidBlockEffect.Parameters[&quot;BlockTexture&quot;].SetValue(_textureAtlas);</code></pre>\n\n(the _textureAtlas is a texture containing the spritesheet of blocks)<br />\n<br />\nVery similar (AFAIK) in NewTake, except that the code is in NewTake\\view\\Renderers\\SimpleRenderer.cs:<br />\n<pre><code>_solidBlockEffect.Parameters[&quot;Texture1&quot;].SetValue(_textureAtlas);</code></pre>\n\nAnd getting beyond that - to the effects files themselves (SolidBlockEffect.fx), is getting beyond me to understand properly at this point...<br />\n<br />\nSomeone kindly correct me if I'm wrong? :)<br />\n",
+    "PostedDate": "2013-07-13T19:22:49.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070869",
+    "ThreadId": "447377",
+    "Html": "In the original techcraft code...\r<br />\n<br />\nI think what you're looking for is the BlockInformation class \r<br />\n<a href=\"https://techcraft.codeplex.com/SourceControl/latest#TechCraft/TechCraft4.0Engine/WorldEngine/BlockInformation.cs\" rel=\"nofollow\">https://techcraft.codeplex.com/SourceControl/latest#TechCraft/TechCraft4.0Engine/WorldEngine/BlockInformation.cs</a>\r<br />\nThis is what the engine uses to determine which texture is used for the different faces of a block.\r<br />\n<br />\nThe actual process of building the vertex buffers and applying the textures is done in the region class\r<br />\n<a href=\"https://techcraft.codeplex.com/SourceControl/latest#TechCraft/TechCraft4.0Engine/WorldEngine/Region.cs\" rel=\"nofollow\">https://techcraft.codeplex.com/SourceControl/latest#TechCraft/TechCraft4.0Engine/WorldEngine/Region.cs</a>\r<br />\n<br />\nIn newtake...\r<br />\n<a href=\"https://techcraft.codeplex.com/SourceControl/latest#TechCraft/NewTake/NewTake/view/blocks/BlockInformation.cs\" rel=\"nofollow\">https://techcraft.codeplex.com/SourceControl/latest#TechCraft/NewTake/NewTake/view/blocks/BlockInformation.cs</a>\r<br />\n<br />\nThe actual rendering is done by one of the renderers eg.\r<br />\n<a href=\"https://techcraft.codeplex.com/SourceControl/latest#TechCraft/NewTake/NewTake/view/blocks/VertexBlockRenderer.cs\" rel=\"nofollow\">https://techcraft.codeplex.com/SourceControl/latest#TechCraft/NewTake/NewTake/view/blocks/VertexBlockRenderer.cs</a>\r<br />\n<br />\nThe newtake code is a bit messy since there was a lot of experimental stuff added to the code\r<br />\n<br />\nHope this helps<br />\n",
+    "PostedDate": "2013-07-20T15:31:11.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

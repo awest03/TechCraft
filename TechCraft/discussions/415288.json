@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "967716",
+    "ThreadId": "415288",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I came across this bug in my own engine, and I noticed that you have this error too.</p>\r\n<p>When generating UV addresses, the code generates, for example, a bottom left corner of (0, w) and a bottom right corner of (w, w), where w is the width of a texture. &nbsp;However, the problem arises when the texture in the next row is generated, and give\r\n a top left corner of (0, w) and a top right corner of (w, w).</p>\r\n<p>This causes a sliver of another texture to be shown on the edges of the first texture when rendering.</p>\r\n",
+    "PostedDate": "2012-12-23T15:51:27.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

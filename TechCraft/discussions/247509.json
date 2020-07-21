@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "571879",
+    "ThreadId": "247509",
+    "Html": "<p><a href=\"http://blogs.msdn.com/b/codeplex/archive/2010/01/22/codeplex-now-supporting-native-mercurial.aspx\">http://blogs.msdn.com/b/codeplex/archive/2010/01/22/codeplex-now-supporting-native-mercurial.aspx</a></p>\n<p>What would you prefer ? Myself I&nbsp;prefer mercurial, just for the ability to do local commits on my laptop offline and push the changesets to the repository later. The advanced branching / merging of forks is interesting too for an experimental opensource project.</p>\n<p>For enabling mercurial instead of svn we just need&nbsp;to ask the codeplex support ...&nbsp;</p>",
+    "PostedDate": "2011-02-24T17:50:33.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572093",
+    "ThreadId": "247509",
+    "Html": "<p>I've read about Mercurial, but never used it - I'm looking for something to use for my own projects so will give it a go if you recommend. Happy to go with what you think best.</p>",
+    "PostedDate": "2011-02-25T05:32:03.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572430",
+    "ThreadId": "247509",
+    "Html": "<p>Asked Codeplex support , they enabled it, I commited locally and pushed here the original xna4 &nbsp;version and then commited/pushed the modifications I made since 2 days ;)</p>\r\n<p>What I really like with mercurial vs svn&nbsp; is that there is no garbage .svn subfolders in your sources, so&nbsp;you can commit something and&nbsp;do some copy paste of code from another folder, and&nbsp;the source control only sees the new or changed files.</p>\r\n<p>I use tortoisesvn from the windows explorer, like in the url in the first post. Only trick was to close the commit window after entering my username and password, it was asking for username in infinite loop.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-02-25T20:04:56.073-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

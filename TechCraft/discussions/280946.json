@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "703795",
+    "ThreadId": "280946",
+    "Html": "\r\n<p>Hi, how can I make that game plays a sound, when the character is moving?</p>\r\n<p>I've tried some codes from the internet, but they didn't work, there were about 10 errors and I gave up.</p>\r\n<p>Please help</p>\r\n",
+    "PostedDate": "2011-11-27T02:11:19.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "705298",
+    "ThreadId": "280946",
+    "Html": "<p>It should be possible to use the audio functions within XNA for this.</p>\r\n<p>What have you tried, and what errors were you getting?</p>",
+    "PostedDate": "2011-11-30T07:17:24.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "811028",
+    "ThreadId": "348782",
+    "Html": "\r\n<p><br>\r\nTalking of games using TechCraft...</p>\r\n<p>&nbsp;Please consider supporting the GunCraft kickstarter&nbsp;<a href=\"http://www.kickstarter.com/projects/630555339/guncraft-voxel-based-first-person-shooter?ref=live\">http://www.kickstarter.com/projects/630555339/guncraft-voxel-based-first-person-shooter?ref=live</a></p>\r\n<p>Check out gameplay video here&nbsp;<a href=\"http://www.youtube.com/watch?v=ClABWdwFiDA\">http://www.youtube.com/watch?v=ClABWdwFiDA</a>&nbsp;and our great MW3: Vet and N00b parody trailer here&nbsp;<a href=\"http://www.youtube.com/watch?v=Osly3J_Bg4o\">http://www.youtube.com/watch?v=Osly3J_Bg4o</a></p>\r\n<p>And yes there are still some lighting bugs in there!</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2012-03-15T12:18:14.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811123",
+    "ThreadId": "348782",
+    "Html": "<p>I had no idea GunCraft was this TechCraft engine also. A few clips in the gameplay video show the grass textures from TechCraft I think. Great spotting thezman!</p>",
+    "PostedDate": "2012-03-15T15:09:56.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811171",
+    "ThreadId": "348782",
+    "Html": "<p>Its not great spotting :-) I'm the dev....&nbsp;</p>",
+    "PostedDate": "2012-03-15T16:54:00.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811188",
+    "ThreadId": "348782",
+    "Html": "<p>Congrats Z man, you have a nice product and kickstarter strategy, with t shirts and everything, very pro ! &nbsp;</p>\n<p>And I know what I say, I m web developer in the AAA game industry now !&nbsp;</p>\n<p>I'm still involved with another private voxel project but my new day job career takes a lot of time and energy !</p>\n<p>Concerning us the techcraft authors, we can say we already did kickstart your project with the time we spent coding techcraft :)&nbsp;</p>\n<p>Just for curiosity, did you base your code on the newtake / did you build on my tool OO design for weapons ?</p>",
+    "PostedDate": "2012-03-15T17:57:00.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811271",
+    "ThreadId": "348782",
+    "Html": "<p>Yes, congrats Z man. I wish you and all others involved in GunCraft as much success as is possible. Its a great hook on FPS and 3D Voxels combined.</p>\r\n<p>If you need a play tester, count me in :)</p>",
+    "PostedDate": "2012-03-16T00:53:54.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811421",
+    "ThreadId": "348782",
+    "Html": "<p>The code is based on the NewTake stuff - though there are times I wish I had gone earlier to avoid the lighting issues... but we were green back then :-)</p>\r\n<p>The tool code is much the same... we ended up doing our own OO weapon stuff.. now you mention it I probably could have layered tools in there or merged them but at the time it was.</p>\r\n<p>We added ray cast weapons, grenade type weapons and removed the&nbsp;dynamic&nbsp;load/save and all of the terrain generation (our levels are fixed size hand crafted) and I just added block based particles... so its moved on from the start point quite a lot. Of course even if I could separate and merge in some of those are our 'competitive advantage'... if I put them in the source before we launch you know what would happen :-)</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-03-16T07:06:13.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812292",
+    "ThreadId": "348782",
+    "Html": "<p>Great to see the engine being used - best of luck with the kickstarter - i really like the sound of the project.</p>",
+    "PostedDate": "2012-03-18T19:02:59.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812614",
+    "ThreadId": "348782",
+    "Html": "<p>In my very first version of techcraft&nbsp;http://www.youtube.com/watch?v=uy4mLCKBMEI - no game is complete without Bazooka's and you guys look like you've done it in style :)</p>",
+    "PostedDate": "2012-03-19T11:19:22.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812672",
+    "ThreadId": "348782",
+    "Html": "<p>The bazooka code is still mostly yours I think.. Though we now have 'block' particle effects for the breaking blocks and for head/body killshots.&nbsp;</p>\r\n<p>We now have added raycast weapons for the guns and last week I added&nbsp;grenades&nbsp;that correctly bounce around the environment. These are all pretty new so are not in the current gameplay videos.</p>\r\n<p>Of course the whole thing is multiplayer using the fantastic Lidgren - we've had a few 12-14 person games and though there is work to do everyone has had fun.&nbsp;</p>",
+    "PostedDate": "2012-03-19T12:44:16.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812754",
+    "ThreadId": "348782",
+    "Html": "<p>Looking forward to playing! - Does Lidgren work with XBOX Live now ? I thought it was windows only...might have to look into that if it does</p>",
+    "PostedDate": "2012-03-19T17:12:49.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "815108",
+    "ThreadId": "348782",
+    "Html": "<p>Congrats for the funding ! The new gameplay session video changes everything in my opinion.</p>",
+    "PostedDate": "2012-03-24T19:38:00.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "815110",
+    "ThreadId": "348782",
+    "Html": "<p>No Lidgren is still PC only. However the 'send message' API is very very similar to the one on xbox live.&nbsp;</p>\r\n<p>So we use Live on Xbox and lidgren on PC through a wrapper... right now all our network testing is done on PC&nbsp;because&nbsp;its easier to get testers there - no $99 account needed.&nbsp;</p>",
+    "PostedDate": "2012-03-24T19:59:29.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "815410",
+    "ThreadId": "348782",
+    "Html": "<p>Congratulations thezman on reaching your kickstarter goal. I wish you and the rest of the team good luck on the project.</p>",
+    "PostedDate": "2012-03-26T00:05:12.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "815659",
+    "ThreadId": "348782",
+    "Html": "<p>Yup congrats on reaching your goal - looking forward to playing the Beta now ...hurry up and finish it already :)</p>",
+    "PostedDate": "2012-03-26T09:21:34.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

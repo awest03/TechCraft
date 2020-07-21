@@ -1,0 +1,138 @@
+[
+  {
+    "Id": "572630",
+    "ThreadId": "247711",
+    "Html": "\r\n<p>First off, FANTASTIC little engine.</p>\r\n<p>I however am a little put off with the mouse keyboard relationship. I love the moving vantage with mouse but would like to see some button implimentations.</p>\r\n<p>Are you guys working on a way to save the current region?</p>\r\n<p>Also, Jump seems really unrealistic. I think thats the first thing I am going to look into changing.</p>\r\n<p>Bu great app :D</p>\r\n<p>&nbsp;</p>\r\n<p>Oh and FINALLY! Thanks for the xna 4.0 port over. Been waiting for that.</p>\r\n",
+    "PostedDate": "2011-02-26T13:24:57.337-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572632",
+    "ThreadId": "247711",
+    "Html": "<pre>for the jump, i commented it ( because swimming is not enabled, I was always stuck on the sea bottom)  !<br /><br />look in the player class :<br /><br /> <span style=\"color: green;\">//XXX fly mode</span><br />                <span style=\"color: green;\">//if (_world.SolidAtPoint(footPosition) &amp;&amp;  _playerVelocity.Y == 0)</span><br />                <span style=\"color: green;\">//{<br /><br /></span><pre>for the mouse buttons, bamyazi was more into the xbox version at first<br /><br />=&gt; try to patch the code yourself, search for keyboard mappings E and Q. and send us the patch (or as an answer here ! )<br /><br /><br />just search for XXX to see all places where I changed the original code, except for the xna 3.1 to 4.0 necessary changes, and the terrain implem in gameclient.cs.</pre>\n<br /><span style=\"color: green;\"><br /></span></pre>",
+    "PostedDate": "2011-02-26T13:34:13.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572634",
+    "ThreadId": "247711",
+    "Html": "<p>And yes, we are working on the region system .</p>",
+    "PostedDate": "2011-02-26T13:41:45.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572647",
+    "ThreadId": "247711",
+    "Html": "<p>OK implimenting the mouse buttons was uber easy:</p>\r\n<p>Added the mousestate check state here:</p>\r\n<p>public void CheckBuild(GameTime gameTime)&nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;{</p>\r\n<p>-----&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MouseState mouseState = Mouse.GetState();</p>\r\n<p>&nbsp;</p>\r\n<p>And then added the appropriate or statements for the mappings for Q and E</p>\r\n<p>if (_game.InputState.IsButtonPressed(Buttons.LeftTrigger, _game.ActivePlayerIndex, out controlIndex) ||&nbsp;&nbsp;</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _game.InputState.IsKeyPressed(Keys.E, _game.ActivePlayerIndex, out controlIndex) ||&nbsp;&nbsp; &nbsp;</p>\r\n<p>----&gt; &nbsp; &nbsp; mouseState.RightButton == ButtonState.Pressed)</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;if (_game.InputState.IsButtonPressed(Buttons.RightTrigger, _game.ActivePlayerIndex, out controlIndex) ||&nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_game.InputState.IsKeyPressed(Keys.Q, _game.ActivePlayerIndex, out controlIndex) ||</p>\r\n<p>----&gt; &nbsp; &nbsp; &nbsp; &nbsp; mouseState.LeftButton == ButtonState.Pressed)</p>\r\n<p>I am going to check the jump code now.</p>\r\n<p>Thanks for the quick response by the way. My name is Paul.</p>",
+    "PostedDate": "2011-02-26T14:18:52.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572648",
+    "ThreadId": "247711",
+    "Html": "<p>I see what you were saying about the water. With the player jump distance set to 6f they only jump that far under water as well.&nbsp;</p>\r\n<p>In a way I can see how thats a pain but on the other hand with no limitations on building materials and life at the moment its really not that big of a deal. :)</p>",
+    "PostedDate": "2011-02-26T14:27:35.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572859",
+    "ThreadId": "247711",
+    "Html": "<p>I committed it , plus a few small fixes&nbsp; like the debug.font that was missing (debug * resources are ignored so i renamed it to console.font). Now the project works immediately from checkout ( 'clone' in mercurial terms) .&nbsp;</p>\r\n<p>As always, nothing ever takes 5 minutes&nbsp; in development , to make it work correctly I had to check the previous mouse state&nbsp; too ( there is no ButtonState.clicked , only pressed / released ! )&nbsp;</p>\r\n<p>and while i was at it, I did add the block selection with mouseWheel too .</p>",
+    "PostedDate": "2011-02-27T11:08:03.193-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572903",
+    "ThreadId": "247711",
+    "Html": "<p>You should be able to get swimming to work by disabling the check to ensure you are standing on a block in the jump code when you are underwater.</p>\r\n<p>If i remember correctly there is already an _isUnderwater flag, which is used to identify when to generate bubble particles and add the blue overlay.</p>",
+    "PostedDate": "2011-02-27T14:03:00.007-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572914",
+    "ThreadId": "247711",
+    "Html": "<p>Enomi,</p>\r\n<p>So I got the mouse working but the mouse clicks were insanely quick. So clicking on a block removed 3 or 4 rather then just one. I had to impliment a catch. Code below:</p>\r\n<p>In the declarations:</p>\r\n<p>private MouseState mouseStateCurrent;<br />private MouseState mouseStateCurrentLeft;<br />private MouseState mouseStatePreviousLeft;<br />private MouseState mouseStateCurrentRight;&nbsp;&nbsp; &nbsp; &nbsp;<br />private MouseState mouseStatePreviousRight;</p>\r\n<p>In the &nbsp;</p>\r\n<p>Update method:</p>\r\n<p>mouseStateCurrentLeft = Mouse.GetState(); &nbsp;<br />mouseStateCurrentRight = Mouse.GetState();</p>\r\n<p>if (mouseStateCurrentLeft.LeftButton == ButtonState.Pressed &amp;&amp; mouseStatePreviousLeft.LeftButton == ButtonState.Released)&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /><span style=\"white-space: pre;\"> </span>CheckBuild(gameTime);&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /><span style=\"white-space: pre;\"> </span>mouseStatePreviousLeft = mouseStateCurrentLeft;<br />if (mouseStateCurrentRight.RightButton == ButtonState.Pressed &amp;&amp; mouseStatePreviousRight.RightButton == ButtonState.Released)&nbsp;&nbsp; &nbsp; &nbsp;<br /><span style=\"white-space: pre;\"> </span>&nbsp;&nbsp;{<br />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CheckBuild(gameTime);<br />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>mouseStatePreviousRight = mouseStateCurrentRight; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>Now you might notice I stopped calling the CheckBuild other then that. This of course negated the \"Q\" and \"E\" keys but I am ok with that.</p>\r\n<p>&nbsp;</p>\r\n<p>Lets see, also added a bunch of new sounds and some logic to determine what block plays what sound.<br />I got rid of the bazooka. Nice... but not the effect I am going for :-P</p>\r\n<p>Now please guys, dont be to critical of my coding skills. Im a vb guy. Started coding 20 years ago in QB, and been a basic coder ever scince then. <br />I know enough about c# to be dangerous but this is my first full fledge dive into c# so if you see a lot of newbie mistakes forgive me.</p>\r\n<p>&nbsp;</p>\r\n<p>On another note. Anyway to invoke the lighting? When you encapsulate yourself in blocks it should be dark. But it is not. I tried the Lighting.Update method as blocks are added and or removed but that was kinda stupid as I think thats already been invoked.</p>\r\n<p>&nbsp;</p>\r\n<p>bamyazi, I have seen the isUnderwater flag. I will give that swimming thing a shot. Thanks :)</p>",
+    "PostedDate": "2011-02-27T14:44:41.337-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572916",
+    "ThreadId": "247711",
+    "Html": "<p>Oh? What did you do with block selection on mousewheel. Can I grab the code from you?</p>",
+    "PostedDate": "2011-02-27T14:46:27.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572924",
+    "ThreadId": "247711",
+    "Html": "<p>I am thinking about a save, recall or crud operations. For games. I know you guys are working on it. I am not a file system kinda guy :-P So was thinking something more robust like say mysql. Thoughts?</p>\r\n<p>My boyfriend is giving me a hand on this. He is more c# driven then I am. We looked breifly at your game building methods.... While I was there I implemented Iron and Gold insertion.</p>\r\n<p>In the LandscapeMapGenerator.cs under the GenerateRockLayer I added:</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (r.Next(50) == 1)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_map[x, y, z] = BlockType.Iron; <br />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /><span style=\"white-space: pre;\"> </span>else if (r.Next(100) == 1)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /><span style=\"white-space: pre;\"> </span>{&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br /><span style=\"white-space: pre;\"> </span>&nbsp;&nbsp;&nbsp;&nbsp;_map[x, y, z] = BlockType.Gold;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>If you havent noticed yet, I am going for a complete Minecraft clone.</p>\r\n<p>I love Minecraft, but would love to be able to impliment more features. So the plan for me is to get this as close to that as possible then work on new features. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>",
+    "PostedDate": "2011-02-27T15:05:35.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572978",
+    "ThreadId": "247711",
+    "Html": "<p>I already solved the click problem&nbsp; ( I think ;) and commited the code + mousewheel (blockpicker.cs) . You just need to store one previousmousestate.</p>\r\n<p>The code is available here</p>\r\n<p><a href=\"http://techcraft.codeplex.com/SourceControl/list/changesets\">http://techcraft.codeplex.com/SourceControl/list/changesets</a></p>\r\n<p>we use mercurial as source control ( a new alternative to cvs, sourcesafe, tfs etc ... )&nbsp;. Read this <a href=\"http://blogs.msdn.com/b/codeplex/archive/2010/01/22/using-mercurial-on-codeplex.aspx\">http://blogs.msdn.com/b/codeplex/archive/2010/01/22/using-mercurial-on-codeplex.aspx</a></p>\r\n<p>&nbsp;in fact to get the latest code and gain the ability to update it, you ll just have to install the software 'hgtortoise' and then do a 'clone' of&nbsp;<strong><a href=\"https://hg01.codeplex.com/techcraft\">https://hg01.codeplex.com/techcraft</a></strong></p>\r\n<p>---</p>\r\n<p>about LandscapeMapGenerator, I know it s way cooler and has&nbsp;trees, snow water&nbsp;than the terrain I added, but it&nbsp;was not&nbsp;designed for an infinite or large map .</p>\r\n<p>The new terrain is able to create seamless regions independently, based on their position, and&nbsp;I kept it simple ( no water&nbsp;/ trees)&nbsp;to test this infinite map system thats under developement (not available yet).</p>\r\n<p>=&gt; Dont invest too much time into landscapeMapGenerator it will be replaced !</p>",
+    "PostedDate": "2011-02-27T18:13:15.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572994",
+    "ThreadId": "247711",
+    "Html": "<p>enomi - Thats awesome news. Any idea on a time frame?</p>\r\n<p>I tried just using one mousestate and it freaked out on me. :-P Im going to see what you did.</p>\r\n<p>I would love to use Mercurial - I just dont want to screw up what you guys are doing. Would it create a seperate tree just for what I am doing?</p>\r\n<p>I really am disabling a lot of stuff and enabling a lot of new stuff so I wouldnt recommend anyone be using my code :-P That and im a c# newb.&nbsp;</p>\r\n<p>Thanks for the mousewheel.</p>\r\n<p>I added a glass block just for fun but I am having problems with the transparency. The blocks.png has a new image basic white outline and transparent center. But the blocks show up as black. Any ideas what I am missing?</p>",
+    "PostedDate": "2011-02-27T18:56:05.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572995",
+    "ThreadId": "247711",
+    "Html": "<p>Let me rephrase. The transparent area is showing up solid black. The outline shows up just fine.</p>",
+    "PostedDate": "2011-02-27T19:03:09.347-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "573000",
+    "ThreadId": "247711",
+    "Html": "<p>You wont be able to commit to the main branch, but you can create a public fork if you want ! So&nbsp;we ll&nbsp; have the ability to pull your changes and vice versa. And we can all add mercurial on our resumes&nbsp;;)</p>\r\n<p>For the glass&nbsp;I know you ll have to use Blendstate.AlphaBlend instead of Blendstate.opaque. Search for alphaBlend you ll find the water&nbsp;effect&nbsp;( water is transparent !)</p>\r\n<p>You may have to reactivate the&nbsp;\"model\" class of blocks, see occurences of the word model in region.cs anf blockinformation.ismodelblock (and everywhere else ;)</p>\r\n<p>And if you want to have fun, replace all instances of BlendState.opaque by BlendState.additive, i made this mistake when converting the code to xna4.</p>\r\n<p>For the time frame it depends on bamyazi, I asked his help on this subject . &nbsp;</p>\r\n<p><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">&nbsp;</span></span></p>\r\n<p><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">&nbsp;</span></span></p>",
+    "PostedDate": "2011-02-27T19:24:51.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "573626",
+    "ThreadId": "247711",
+    "Html": "<p>Hum, I just figured the good way to implement this would be in the inputState class. like this : <a href=\"http://www.java2s.com/Open-Source/CSharp/Game/Farseer%20Physics%20Engine%203.0/DemoBaseXNA/ScreenSystem/InputState.cs.htm\">http://www.java2s.com/Open-Source/CSharp/Game/Farseer%20Physics%20Engine%203.0/DemoBaseXNA/ScreenSystem/InputState.cs.htm</a></p>",
+    "PostedDate": "2011-02-28T18:37:20.403-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "573627",
+    "ThreadId": "247711",
+    "Html": "<p>enomi was there any UI out there you wanted to use or base for a UI for techcraft you could recommend?</p>",
+    "PostedDate": "2011-02-28T18:46:38.503-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "573649",
+    "ThreadId": "247711",
+    "Html": "\r\n<div>Its a good subject cause many indie games have a very poor UI, but sorry no idea. found some things by googling &quot;xna ui hud inventory&quot; but no time to research it for now.\r\n</div>\r\n<div></div>\r\n<div>Only requirement : It must be licensed under MS-PL to allow integrating it in our code.</div>\r\n<div></div>\r\n<div>I think UI should be decoupled from the engine, so you can have different types of UI for Xbox and Pc, and for different types of games.\r\n</div>\r\n<div></div>\r\n<div>For my own (nebulous and distant;) game project I may choose to have no Hud at all, just the mousewheel to select tools and everything being interactions with the world/map.\r\n</div>\r\n",
+    "PostedDate": "2011-02-28T20:19:08.74-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

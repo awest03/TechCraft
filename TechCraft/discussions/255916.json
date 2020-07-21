@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "605598",
+    "ThreadId": "255916",
+    "Html": "\r\n<p>Hi guys</p>\r\n<p>First of all, good luck for your project that already looks very nice !</p>\r\n<p>Note: There is a &quot;bug&quot; because when a thread delete a block there already commands to light it or build it. It should clean build &amp; lighting queues before. Anyway that's not the point : )</p>\r\n<p>I saw your threading architecture for the &quot;NewTake&quot;. Some advices while it's still in refactoring, hope it will help<br>\r\nAbout generation you have (or plan to have) 4 threads, one for generating, one for lighting, one for building and one for deleting. This is not very scalable. I have 8 cores in my computer, others only have 1 or 2.<br>\r\nYou could use a single queue for commands, and create as many threads as you want, picking in these commands. Threads do not need to be specialized in a precise task, all they have to do is run in parallel.<br>\r\nSo user (or engine code) could choose how many threads to create at launch, and it would not affect code structure.<br>\r\nMoreover, this would ensure that commands are made in order (Generate&gt;Light&gt;Build&gt;Delete) so no block can be deleted if not Build, etc.</p>\r\n<p>Each thread could behave like:</p>\r\n<p>lock(cmdlist)<br>\r\n{<br>\r\n&nbsp; cmd = cmdlist.Dequeue()<br>\r\n&nbsp; switch(cmd.Type) {<br>\r\n&nbsp;&nbsp;&nbsp; case CmdType.Generate: DoGenerate(cmd);<br>\r\n&nbsp;&nbsp;&nbsp; case CmdType.Light: DoLight(cmd);<br>\r\n&nbsp;&nbsp;&nbsp; case CmdType.Build: DoBuild(cmd);<br>\r\n&nbsp;&nbsp;&nbsp; case CmdType.Delete: DoDelete(cmd);<br>\r\n&nbsp; }<br>\r\n}</p>\r\n<p>What do you think of it ? Am I missing something ? I could help to refactor it if you need a hand.<br>\r\nAnyway, I'm trying some new terrain generator to generate a town, and it's already quite funny !<br>\r\nGood luck again !</p>\r\n",
+    "PostedDate": "2011-05-01T14:14:09.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605605",
+    "ThreadId": "255916",
+    "Html": "<p>Hi,</p>\r\n<p>You're correct about the separation of tasks into separate threads. It was only added yesterday temporarily to investigate some threading issues. It will be removed again soon. Threading is still under development, and you might see some commits that are purely for testing something also as the pre-alpha moves towards alpha.</p>\r\n<p>Thanks for the tip also. If you want to attempt an approach with it, we could always look at whether the code could be used in the main code itself.</p>\r\n<p>The town generator idea seems good. If you feel like sharing some pictures of it, that would be interesting also to see.</p>",
+    "PostedDate": "2011-05-01T14:43:31.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605651",
+    "ThreadId": "255916",
+    "Html": "<p>About generating a town,here s one on my&nbsp;todo-techcraft bookmarks&nbsp;;) &nbsp;&nbsp;</p>\r\n<p><a href=\"http://recreationstudios.blogspot.com/2009/12/procedural-cities-in-xna.html\">http://recreationstudios.blogspot.com/2009/12/procedural-cities-in-xna.html</a></p>\r\n<p>So i would really like to see your progress !</p>\r\n<p>About the threads :&nbsp; go, do your own renderer (bad name by the way) &nbsp;on your fork,&nbsp;we need some fresh&nbsp;look on this part.&nbsp; I ll test it and pull it in the main code when it will be ready&nbsp;( as jacoo said ! )</p>\r\n<p>What im currently trying to achieve is getting rid of the remove_range: If we always remove a chunk&nbsp;when adding a new one, there is no need to scan&nbsp;for chunks to be removed. But I did not invest a lot of time in this the last days, and&nbsp;my vector maths&nbsp;skills&nbsp;are not the best, too much years of&nbsp;business&nbsp;oriented code ;) . So any help would be really appreciated !</p>",
+    "PostedDate": "2011-05-01T18:37:45.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605671",
+    "ThreadId": "255916",
+    "Html": "<p>Newcomers will&nbsp;appreciate the new class simpleRenderer :&nbsp; no threading, no infinite world,&nbsp;an easy to use&nbsp;basis for&nbsp;new developments.</p>\r\n<p>This may be of use for testing light optimizations and trying to find why currently fullscreen mode&nbsp;has so bad fps on laptops !</p>\r\n<p><a href=\"http://techcraft.codeplex.com/SourceControl/changeset/changes/4a332a673e33\">http://techcraft.codeplex.com/SourceControl/changeset/changes/4a332a673e33</a></p>",
+    "PostedDate": "2011-05-01T20:01:00.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "607006",
+    "ThreadId": "255916",
+    "Html": "<p>Some thoughts after investigation the engine a little:</p>\r\n<p>- the modular approach seems quite nice (generators, renderers, controllers, tools...)<br />- The \"Renderer\" (like ThreadPoolWorldRenderer I made) includes blocs generation and rendering them, maybe you could split them.</p>\r\n<p>I tried to rewrite some code to make a simpler threaded processor, but I ran on multiple multi thread issues when I put more than one thread to build/light/generate (I put 6 on my i7). These include:</p>\r\n<p>- Chunk code is not multi-thread-save, in particular _N, _E, _S, _W members, I had to remove it<br />- Lighting code access \"N, E, S, W\" multiple, the value can change weanwhile, this leads to crashes<br />- Vertex buffer generation not MT-safe<br />- Some generators are not MT-safe (TerrainWithReivers uses shared members)</p>\r\n<p>So if I continue on this way, I will have to rewrite quite a lot of code, on Chunk class in particular. I'm not happy with generation as block lighting is usually made more than once (due to neighbors blocks appearing)<br />I suppose others are working on these, so maybe I'll stop here for now. Tell me what you think of the code I made and we'll see if I continue.</p>\r\n<p>enomi : about chunks creating &amp; removing, I made a stack of unused chunks and I reuse them. Like this no \"new\" made if you d'ont change render view distance<br />jacoo2 : no progress on town generation as I spent time on the threaded generation, I'll try to start this now.</p>",
+    "PostedDate": "2011-05-04T04:31:21.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "607334",
+    "ThreadId": "255916",
+    "Html": "<p>Hi, thanks for your good work and input. Did you forget to push your<br /> commits to your fork ? I cant see any new code there !</p>",
+    "PostedDate": "2011-05-04T11:25:38.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

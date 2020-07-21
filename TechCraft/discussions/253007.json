@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "593733",
+    "ThreadId": "253007",
+    "Html": "\r\n<div>Here is the start of an interesting discussion about water on IRC :</div>\r\n<div></div>\r\n<div><span>[15:33] &lt;<span>enomi</span>&gt; maybe water doesnt have to be in cubes, like\r\n<a href=\"http://graphicsrunner.blogspot.com/2008/11/water-game-component.html\" target=\"new\">\r\nhttp://graphicsrunner.blogspot.com/2008/11/water-game-component.html</a></span></div>\r\n<div><span>[15:34] &lt;<span>enomi</span>&gt; just identify the water surface quads somehow from the cube and have an underwater effect</span></div>\r\n<div><span>[15:35] &lt;<span>enomi</span>&gt; water surface effect applied to water surface quads and underwater effect applied underwater</span></div>\r\n<div><span>[15:37] &lt;<span>jacoo</span>&gt; what about flows?</span></div>\r\n<div><span>[15:37] &lt;<span>jacoo</span>&gt; when blocks are removed etc?</span></div>\r\n<div><span>[15:38] &lt;<span>enomi</span>&gt; update the surface quads from block array\r\n</span></div>\r\n<div><span>[15:39] &lt;<span>enomi</span>&gt; there can still be water blocktype blocks in the arrays, its just that only the surface has to be rendered as water</span></div>\r\n<div><span>[15:40] &lt;<span>enomi</span>&gt; rest assured, I know its easy to say in therory, I m still a coder not a full time coordinator :)\r\n</span></div>\r\n<div><span>[15:44] &lt;<span>enomi</span>&gt; could even enable more realistic flow , calculate the volume delta of water when a chunk is changed and adjust the water level\r\n</span></div>\r\n",
+    "PostedDate": "2011-04-07T12:48:42.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "593748",
+    "ThreadId": "253007",
+    "Html": "<p>Have you guys seen Fortress Craft? He's implemmented somthing similar to this.. . though not as nice to be sure.</p>\r\n<p>&nbsp;</p>\r\n<p>http://www.youtube.com/user/ProjectorGames#p/u/4/vKd6fdiuVhQ</p>\r\n<p>&nbsp;</p>\r\n<p>I don't know if he supports flowing water though. looks like it just fills a space in an unbelievable way. the look is ok though.</p>",
+    "PostedDate": "2011-04-07T13:04:02.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "593832",
+    "ThreadId": "253007",
+    "Html": "<p>I was going to post about water earlier - i read an interesting article yesterday about treating fluid blocks as a cellular automaton rather than a queued flow as i'd tried to implement previously in the original techcraft - the article is on the minecraft wiki somewhere but i bookmarked it at work and decided not to post it until we'd got the core engine issues resolved. I'll find it again and post it on here...From the article i get the impression that minecraft uses this already to some extent.</p>\r\n<p>The idea itself is sound and implementing water this way has some intriguing benefits (if done right) like maintaining water volumes so that water doesn't just get created the way it does in the original techcraft code (unless you have an actual source) and will flow from one place to another and deplete the original source.</p>\r\n<p>I've got a copy of Wolframs 'A new kind of science' propping up the bottom of my bookcase - it's a seriously big tome which i've only ever dipped into, but you can do some amazing things with cellular automata and a block world is ideally suited to implementing these types of behaviours.&nbsp;</p>\r\n<p>At it simplest everyone must have seen the game 'Life' which achieves complex behaviours from very simple rules which would be easy to implement in a block world. Wolframs book expands these ideas to model extremely complex fluid dynamics and other dynamic systems from relatively simple sets of rules. Once we've got a solid core engine in place playing with these types of things should be easy to do and something personally i'm very interested in looking into.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-04-07T15:56:43.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "593853",
+    "ThreadId": "253007",
+    "Html": "<p>I'm very interested in looking into this subject too :&nbsp;&nbsp;&nbsp;after water volumes, the&nbsp;next&nbsp;step would be some sort of pressurized lava flowing up, making volcanoes. &nbsp;It&nbsp;would make digging too low extremely dangerous !</p>",
+    "PostedDate": "2011-04-07T17:38:25.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

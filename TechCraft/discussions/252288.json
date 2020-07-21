@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "590809",
+    "ThreadId": "252288",
+    "Html": "\r\n<p>A little status, i think i ll write one per week :</p>\r\n<p>- Currently there have been no commits on the main&nbsp;source since&nbsp;last sunday, because we are waiting from news from Durrban, who did implement lots of cool things but did not send any code for now. Dont&nbsp;spam his mail, I already did it enough\r\n ;)</p>\r\n<p>- Bamyazi , TechCraft 's&nbsp;father, is back with a WP7 port . Currently its available in his dropbox (see his thread), he will commit it as a fork or a separate project.</p>\r\n<p>- Jacoo is tired of waiting for Durrban and made progress in his own fork : &nbsp;infinite world (without threading) , skybox, new terrain algorythms.</p>\r\n<p>- As of today I m not tired of waiting for Durrban,&nbsp;after all it's not been a week since he made his announces, but I did some new code too, and a small part of it is already in jacoo's fork. If Durrban doesnt make a move in the next few days I ll&nbsp;have\r\n to merge jacoo's work in the main&nbsp;source&nbsp;or we will have some developpement fragementation problems.&nbsp;&nbsp;</p>\r\n<p>- I just added dkfd3vil as developer, he's the lead of <a href=\"http://code.google.com/p/mineworld2\" target=\"new\">\r\nhttp://code.google.com/p/mineworld2</a>&nbsp;, a good and&nbsp;active infiniminer fork to make an original/custom minecraft inspired game. I did invite him and its team to join us. Welcome aboard !</p>\r\n<p>For newcomers : all this new&nbsp;initiatives&nbsp;are based on my unfinished rewrite, currently sitting in the &quot;newtake&quot; project.&nbsp;Wich is&nbsp;very encouraging for the future of Techcraft&nbsp;!</p>\r\n<p>The techcraft original code is currently still here but when everything will have been reimplemented it will fade out, NewTake will become TechCraftEngine. I may keep a bazzokaExample project for legacy :)</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-04-02T19:56:54.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "597934",
+    "ThreadId": "252288",
+    "Html": "<p>Lots of work done, always something going on, so here is a small status :</p>\r\n<ul>\r\n<li>The Infinite world code is done, stable in single thread mode and still in progress in multithread mode, thanks to Jacoo 's huge investment in time and efforts.&nbsp;</li>\r\n<li>Bamyazi made a tremendous come back on the project, he implemented Ambient Occlusion, several multithreading tentative, redesigned the way we generate and build, and is currently working on lighting. </li>\r\n<li>Jacoo did implement the crosshair and selection block . </li>\r\n<li>I ve done some more large scale refactoring, performance optimizations.</li>\r\n<li>Jacoo readded the trees, water, sand, tuned the terrain generator and is currently working on new biomes.&nbsp;</li>\r\n<li>I implemented a new player class, currently there s no player entity in game it s still the camera that moves, but mouse clicks&nbsp; are now assigned to player.leftTtool and player.rightTool :&nbsp; coding new sort of tools other than block adder / block remover is just a matter of adding one small class extending tool with a use method ( see my \"Powerdrill\" example, removes one column in one click)</li>\r\n<li>Raistlinthewiz did help us optimize the code with lots of good suggestions, and recently did the grunt work of changing the block arrays to a flat 1 dimension array. Pay him a visit on his own block engine, http://voxlr.com/. </li>\r\n<li>#techcraft IRC channel on freenode has been a success, lots of design discussions happened here. </li>\r\n</ul>\r\n<p>=&gt; Current objectives : lighting, stable multithreading code, then deleting some duplicate methods and classes ( we ve been keeping alternative versions WorldRenderer /&nbsp; ChunkRenderer )</p>\r\n<p>=&gt; Next step : Player movement and collisions, decoupling player and camera.</p>\r\n<p>Thanks to all the team !&nbsp;</p>",
+    "PostedDate": "2011-04-15T07:06:03.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598127",
+    "ThreadId": "252288",
+    "Html": "<p>good progress guys!</p>",
+    "PostedDate": "2011-04-15T11:29:49.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598133",
+    "ThreadId": "252288",
+    "Html": "<p>I second that! Amazing progress in such short time!</p>",
+    "PostedDate": "2011-04-15T11:34:48.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598302",
+    "ThreadId": "252288",
+    "Html": "<p>Finally i implemented the player collisions (WSAD + Space) . the code is far from perfect&nbsp;in regards to&nbsp;coupling of player and cam, but works fine.&nbsp;The application now starts in player physics mode, press&nbsp;F1 to&nbsp;go in freeCam mode.&nbsp;</p>",
+    "PostedDate": "2011-04-15T20:22:40.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598368",
+    "ThreadId": "252288",
+    "Html": "<p>There is basic lighting working in the latest tip on my fork - it doesn't propogate across chunks yet so looks wierd in places</p>",
+    "PostedDate": "2011-04-16T04:14:35.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600137",
+    "ThreadId": "252288",
+    "Html": "<p>Latest tip has good &nbsp;multithreading , lighting ( trunks emit some red color)&nbsp;, chunk.blockat optimization with accessors to N S E W NE NW etc... chunks, and various small code cleanups&nbsp;</p>\r\n<p>Few Bugs :</p>\r\n<p>- digging makes the affected chunks flash, something related to the way multithreading handles the dirty flag, another flag may be required when digging.</p>\r\n<p>- &nbsp;I had a thread closed problem visiting the world at a moment, program did hang. ( may be an already&nbsp;fixed bug , as when i saw this an accessor was returning chunk.W instead of East )</p>\r\n<p>- I had an index&nbsp;overflow&nbsp;in dictionary2, by travelling fast in freecam mode (F1)&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-04-19T20:35:48.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "616525",
+    "ThreadId": "252288",
+    "Html": "<p>Hi there . Project status, as at least one guy asked on IRC ;)</p>\r\n<p>Project is definitely not dead, but as Jacoo, Bamyazi and me were the only ones commiting some code,&nbsp; we are now&nbsp;actively working on a concrete game project, in private. We will eventually ( = at some undefined time) put things on opensource there again ! &nbsp;</p>\r\n<p>Of course if someone starts contributing for real, we will assist and maybe even provide more of our own code.</p>\r\n<p>Then there is the complexity aspect&nbsp;: Our new code is way more difficult to understand for beginners, due to the integration with the Ninject dependency injection framework + the Nuclex XNA framework, &nbsp;those two are now required to build, run, and&nbsp;understand&nbsp;our private version !</p>\r\n<p>&nbsp;I could port this part here on codeplex&nbsp;( and all the refactoring to xna drawablegamecomponents&nbsp; that comes with it) but I m not sure our user base will benefit from it. Some feedback here would be appreciated !</p>",
+    "PostedDate": "2011-05-22T19:18:03.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626206",
+    "ThreadId": "252288",
+    "Html": "<p>Quick update : we are still actively working on this in private, rewriting , componentizing, experimenting with mobs, physics engines, disk persistence ...</p>\r\n<p>And we still follow this forum and the forks, so if you do something cool with the code and/or need help, we will notice. IRC honestly we don't check, and the chat history our friend raistlin did set up in the past seems dead.</p>",
+    "PostedDate": "2011-06-10T17:00:17.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626319",
+    "ThreadId": "252288",
+    "Html": "<p>Yes, the project is still very much alive in private.</p>\r\n<p>If people following this project want to contribute anything to this open source version, I would be glad to help answer questions.</p>",
+    "PostedDate": "2011-06-11T03:40:50.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

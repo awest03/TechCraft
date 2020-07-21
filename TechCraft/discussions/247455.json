@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "571659",
+    "ThreadId": "247455",
+    "Html": "\r\n<p>So I been playing around with finder grain voxels or cubes. &nbsp;Basically created a way to scale the generated world by a value i.e. Right now the worlds cubes are generated at 1 vertex length and I played with reducing each cube to be 1/2th that... So\r\n where one cube is now 4 sits. &nbsp;I realize this steps away from how minecraft was built, but if XNA is more&nbsp;powerful&nbsp;then Java, curious to see some&nbsp;truly&nbsp;destructable&nbsp;(mineable) finer grain terrain. &nbsp;Has anyone checked this\r\n out?</p>\r\n",
+    "PostedDate": "2011-02-24T10:49:19.853-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "571686",
+    "ThreadId": "247455",
+    "Html": "I think you could achieve the same result by dezooming the camera and keep vertex length to 1.<br>\r\nIt just comes to how many cubes you can have on screen, maybe you could tune the region size in your case. decreasing REGIONHEIGHT maybe.<br>\r\n<br>\r\nAbout the xna/directx more powerful than java/opengl thing it's more a question of engine optimization, see\r\n<a href=\"http://ardorlabs.se/ArdorCraft/\">http://ardorlabs.se/ArdorCraft/</a> for a rocking good java implementation, runs 10 times faster than minecraft on my laptop - but its closed source I'm afraid ;(\r\n<br>\r\n<br>\r\n<div>On Thu, Feb 24, 2011 at 1:49 PM, cdrrck28 <span dir=\"ltr\">&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"border-left:1px solid rgb(204,204,204); margin:0pt 0pt 0pt 0.8ex; padding-left:1ex\">\r\n<div>\r\n<p>From: cdrrck28</p>\r\n<div>\r\n<p>So I been playing around with finder grain voxels or cubes. Basically created a way to scale the generated world by a value i.e. Right now the worlds cubes are generated at 1 vertex length and I played with reducing each cube to be 1/2th that... So where\r\n one cube is now 4 sits. I realize this steps away from how minecraft was built, but if XNA is more powerful then Java, curious to see some truly destructable (mineable) finer grain terrain. Has anyone checked this out?</p>\r\n</div>\r\n<div>\r\n<p>Read the <a href=\"http://techcraft.codeplex.com/discussions/247455#post571659\" target=\"_blank\">\r\nfull discussion online</a>.</p>\r\n<p>To add a post to this discussion, reply to this email (<a href=\"mailto:TechCraft@discussions.codeplex.com?subject=[TechCraft:247455]\" target=\"_blank\">TechCraft@discussions.codeplex.com</a>)</p>\r\n<p>To start a new discussion for this project, email <a href=\"mailto:TechCraft@discussions.codeplex.com\" target=\"_blank\">\r\nTechCraft@discussions.codeplex.com</a></p>\r\n<p>You are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://techcraft.codeplex.com/subscriptions/thread/project/edit\" target=\"_blank\">\r\nunsubscribe or change your settings</a> on codePlex.com.</p>\r\n<p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at\r\n<a href=\"http://codeplex.com\" target=\"_blank\">codeplex.com</a></p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n</div>\r\n<br>\r\n",
+    "PostedDate": "2011-02-24T11:32:48.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "571713",
+    "ThreadId": "247455",
+    "Html": "<p>That guy has some really great concepts. &nbsp;Always thought minecraft would have looked better as a round world, it would change a lot of the game mechanics but would look awesome.</p>",
+    "PostedDate": "2011-02-24T12:05:27.85-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572105",
+    "ThreadId": "247455",
+    "Html": "<p>Why yes i have :0</p>\n<p><a href=\"http://imgur.com/SibiX\">http://imgur.com/SibiX</a></p>\n<p>Lots of technical issues with it though....At the resolution in the screenshot you're pushing something like 2 million polys per frame just for the terrain - with a vertical resolution of 32 cubes. I've sent Enomi some of the code from my new project which  may be useful in this engine - Infinite map and&nbsp;simplified&nbsp;region renderer. However i don't think you'll ever be able to produce a true realtime voxel engine with the minecraft rendering approach .</p>\n<p>If you're aiming for this sort of resolution then techcraft style rendering is probably not the best method to be honest. Most engines i've seen which run in realtime use a software ray tracing approach. The easiest method looks to be you have a voxel volume  (basically a big 3d array). For each pixel on the screen you project a ray into the voxel volume and get the first voxel it intersects which then becomes the pixel color. You then basically just render voxels into the voxel volume as your scene changes...I'm  fairly sure Voxatron&nbsp;<a href=\"http://www.break.com/game-trailers/game/voxeltron/voxatron-preview\">http://www.break.com/game-trailers/game/voxeltron/voxatron-preview</a>&nbsp;uses this approach.</p>\n<p>Ken Silverman is pretty much the king of this rendering style IMHO</p>\n<p><a href=\"http://www.advsys.net/ken/voxlap.htm\"><a href=\"http://www.advsys.net/ken/\">http://www.advsys.net/ken/</a></a></p>\n<p><a href=\"http://www.advsys.net/ken/voxlap.htm\"><a href=\"http://www.advsys.net/ken/\"></a>http://www.advsys.net/ken/voxlap.htm</a></p>\n<p>The second approach is instead of using a voxel volume you use a sparse voxel octtree to store the voxel data. This is more complex but can have awesome results since it can provide for an almost infinite level of detail. Rendering is pretty much the same  as before using a ray tracing approch you project your ray into the octtree. LOD can be achieved by restricting how deep you project into the tree.&nbsp;<a href=\"http://www.youtube.com/watch?v=VpEpAFGplnI\">http://www.youtube.com/watch?v=VpEpAFGplnI</a></p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>",
+    "PostedDate": "2011-02-25T05:58:05.977-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

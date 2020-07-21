@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "610714",
+    "ThreadId": "257153",
+    "Html": "I have a question is there a way to play this game as a exe file or without the need for visual basic or the other programing software I only wish to play the game not to edit it",
+    "PostedDate": "2011-05-10T21:25:16.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610718",
+    "ThreadId": "257153",
+    "Html": "<p>Hi. There s no executable released, the source is really in a pre-alpha state,&nbsp;sorry.</p>\r\n<p>And there s no gameplay by the way, just an engine : even building something in the world would be a big waste of time, the world is not saved to disk currently.</p>\r\n<p>Follow the project , there will be a demo executable release one day, cant say when. could be weeks or months. Or could be tomorrow if someone makes it on his own fork ;)</p>",
+    "PostedDate": "2011-05-10T21:36:41.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

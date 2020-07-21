@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1024091",
+    "ThreadId": "438753",
+    "Html": "Hi guys!\r<br />\n<br />\nFirst of all, great work you guys did here, thanks a lot for sharing it with all of us!\r<br />\n<br />\nI've read in a few different places (incl. in this discussions here), that Techcraft supports infinite terrains. However, the demo project is not using this. \r<br />\nIs there a simple was to &quot;enable&quot; the infinite generation or do I need to reverse engineer the engine and implement that functionality?\r<br />\n<br />\nI've had a look at voxeliq too....which has the Infinite functionality implemented by default, but unfortunately, voxeliq apparently is not updated anymore and has some bad issues with some broken voxels, so I wanted to get back to Techcraft instead! :)\r<br />\n<br />\nThanks a lot in advance for your feedback!<br />\n",
+    "PostedDate": "2013-04-02T00:45:22.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1024092",
+    "ThreadId": "438753",
+    "Html": "Hi DanielJC,\r<br />\n<br />\nThe NewTake project has infinite terrain. Simply set it as the startup project in Visual Studio, and you are good to go!<br />\n",
+    "PostedDate": "2013-04-02T00:47:03.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1024129",
+    "ThreadId": "438753",
+    "Html": "Hi Jacoo2!\r<br />\n<br />\nthanks for the fast feedback!\r<br />\nI have tried NewTake (latest version from codePlex) .....but if I walk to the &quot;end&quot; of the terrain, all I get is this &quot;black area&quot; instead of newly generated terrain.\r<br />\nAm I doing something wrong?\r<br />\n<br />\n<img src=\"http://s21.postimg.org/9wquscd1j/New_Take_Infinite_Terrain.png\" alt=\"Image\" />\r<br />\n<br />\nThanks a lot for your help!<br />\n",
+    "PostedDate": "2013-04-02T02:05:40.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1025323",
+    "ThreadId": "438753",
+    "Html": "Did I do something wrong when using NewTake? Is there maybe a flag to be set, in order for the &quot;infinite&quot; world, continuously to be generated?\r<br />\n<br />\nThanks a lot in advance for your feedback!<br />\n",
+    "PostedDate": "2013-04-04T04:28:28.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1033110",
+    "ThreadId": "438753",
+    "Html": ".<br />\n",
+    "PostedDate": "2013-04-19T09:02:43.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

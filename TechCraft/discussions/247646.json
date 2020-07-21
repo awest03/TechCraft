@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "572443",
+    "ThreadId": "247646",
+    "Html": "\r\n<p>Hi Guys,</p>\r\n<p>First, huge thanks for this really great project. The work you've done is really helpful to us novice coder types!</p>\r\n<p>I know Bam said that originally this engine was working with sunburn, any chance you can lend some pointers on how to go about getting the engine to run with sunburn lighting?</p>\r\n<p>Would anyone have any example projects? Specifically I'm not sure what or where I should be looking for the actual voxel that needs to be submitted to sunburn for rendering.</p>\r\n<p>Basically any help you could provide in the right direction would be really appreciated!</p>\r\n<p>Thanks again, I hope to one day be a contributing member to this project as I think it's really awesome!</p>\r\n<p>~Kris</p>\r\n",
+    "PostedDate": "2011-02-25T20:42:41.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572643",
+    "ThreadId": "247646",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://techcraft.codeplex.com/workitem/3\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2011-02-26T13:55:51.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "573194",
+    "ThreadId": "247646",
+    "Html": "<p>I posted an experimental variation on the engine which uses sunburn to the work item. It supports high res textures and normal maps and non cube blocks.</p>",
+    "PostedDate": "2011-02-28T04:37:20.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

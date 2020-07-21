@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "if possible water should really flow =  remove blocks on the opposite side or decrease a lake level, not just spawn new blocks.",
+    "LastUpdatedDate": "2012-11-24T18:24:42.96-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-03-31T07:12:35.473-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Water flow",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 4,
+    "Id": 6
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

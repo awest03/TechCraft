@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "572436",
+    "ThreadId": "247643",
+    "Html": "<p>Bamyazi gave me some code from another project, to implement infinite terrain (&nbsp;RegionCache in latest source version on mercurial).</p>\n<p>I adapted it to the existing code, it compiles&nbsp;but it's currently not in use.</p>\n<p>But something I&nbsp;have done completely is \"rebuild the map generator with a far smarter one which can produce the landscape for any region on demand\" .&nbsp;</p>\n<p>I had just to port it from my old java project , the only difficulties were to not multiply by regionWidth 2 times (because&nbsp;region.position is already multiplied and in my java code it was not )&nbsp;and to understand how to overrides a method in&nbsp;c-sharp ;)&nbsp;</p>\n<p>There are now 3 new terrains : FlatReferenceTerrain, SimpleTerrain, and TerrainWithCaves. The code originally came from the minepackage unity project ( Big thanks to the minepackage guys ! ) .</p>\n<p>For now I just plugged it in&nbsp;gameclient.cs&nbsp;. There are no trees and water, and the region height must be equal to map height , tuned for 128 blocks like a certain&nbsp;game named minecraft&nbsp;;)&nbsp;&nbsp;&nbsp;</p>\n<p>&nbsp;FlatReferenceTerrain is for debugging :&nbsp;</p>\n<p><img src=\"http://i52.tinypic.com/1zbgyfn.png\" border=\"0\" alt=\"Image and video hosting by TinyPic\" /></p>\n<p>SimpleTerrain is just valleys :</p>\n<p>&nbsp;<img src=\"http://i55.tinypic.com/dxeb8o.png\" border=\"0\" alt=\"Image and video hosting by TinyPic\" /></p>\n<p>And terrainWithCaves has ... caves :</p>\n<p>&nbsp;<img src=\"http://i53.tinypic.com/34yquyg.png\" border=\"0\" alt=\"Image and video hosting by TinyPic\" /></p>\n<p>Next step : adding and removing regions with the multithreaded regionCache &amp; cleaning and debugging the code, then only reimplement trees, water, snow, lava , anything.</p>\n<p>Bamyasi can you help with the regionCache ?</p>",
+    "PostedDate": "2011-02-25T20:22:49.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572459",
+    "ThreadId": "247643",
+    "Html": "<p>Wow looks really good. &nbsp;Texture pack is such an eye sore! &nbsp;Let me see if I can find something.</p>",
+    "PostedDate": "2011-02-25T22:25:24.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572640",
+    "ThreadId": "247643",
+    "Html": "<p>If you want to play with textures, try to adapt the code to use 32*32 textures instead of 16*16, and post the patch :)</p>\r\n<p>And please check the license of the textures you use and show us where they came from !&nbsp;</p>",
+    "PostedDate": "2011-02-26T13:51:21.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572745",
+    "ThreadId": "247643",
+    "Html": "<p>I modified the client to allow for minecraft terrain.png files to be loaded. They can be of any resolution theoretically (I've only tested 16/32/64/128/256) and do not require&nbsp; any magic number changes. Once I get finished with a few other things I've been working on and have a chance to clean up the code, I will post it up if you'd like.</p>",
+    "PostedDate": "2011-02-27T02:59:10.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572773",
+    "ThreadId": "247643",
+    "Html": "<p>go on, post it if it works, even if its not perfect !<br /> <br /></p>",
+    "PostedDate": "2011-02-27T05:13:38.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "822837",
+    "ThreadId": "352026",
+    "Html": "\r\n<p>I believe it uses techcraft code base;</p>\r\n<p><a href=\"http://minepackage.svn.sourceforge.net/viewvc/minepackage/Assets/Scripts/TerrainGenerationMethods/DualLayerTerrainWithMediumValleys.cs?revision=1&view=markup\">http://minepackage.svn.sourceforge.net/viewvc/minepackage/Assets/Scripts/TerrainGenerationMethods/DualLayerTerrainWithMediumValleys.cs?revision=1&amp;view=markup</a></p>\r\n",
+    "PostedDate": "2012-04-12T03:54:27.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "822874",
+    "ThreadId": "352026",
+    "Html": "<p>Nope, it's the other way : I ripped minepackage's terrain code. The BSD license allowed me to do this :)</p>\r\n<p>Thanks minepackage guys !&nbsp;</p>",
+    "PostedDate": "2012-04-12T05:41:05.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "864514",
+    "ThreadId": "352026",
+    "Html": "<p>oh :)</p>",
+    "PostedDate": "2012-07-13T06:34:26.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

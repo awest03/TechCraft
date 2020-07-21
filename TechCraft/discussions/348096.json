@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "808462",
+    "ThreadId": "348096",
+    "Html": "<p>Congrats running pixel on the first game on XBLIG using the techcraft engine - just been playing the demo and i'd know those lighting bugs anywhere :) Best of luck with the game - bit cheeky claiming everything as your own on your blog tho' dude - didn't even bother to change Jasons graphics lol :P</p>",
+    "PostedDate": "2012-03-10T05:35:39.547-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811025",
+    "ThreadId": "348096",
+    "Html": "<p>Yeah I spotted it too...&nbsp;</p>\n<p>Talking of games using TechCraft... see my new post :-)</p>\n<p>Did you guys ever announce what you were all working on after you left us with those lighting bugs?</p>",
+    "PostedDate": "2012-03-15T12:16:37.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811127",
+    "ThreadId": "348096",
+    "Html": "<p>No, this version of TechCraft was never updated.</p>\r\n<p>I think now that other games have been released using this engine, it might be time to add in new features.</p>\r\n<p>It is a shame that the games authors never wanted to offer any kind of update to this project's source. Still, that is the expectation we had when we committed updates during 2011. That people would use this engine and release exciting games for us all to play.</p>\r\n<p>In answer to your question thezman, I'm working currently on a 3D voxel based game. Id rather not use this discussion as a method to promote it, so simply contact me directly via codeplex to know more.</p>",
+    "PostedDate": "2012-03-15T15:17:52.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811173",
+    "ThreadId": "348096",
+    "Html": "<p>I'm a huge fan of putting things back in codeplex&nbsp;whenever&nbsp;possible... the changes I've made for GunCraft have unfortunatly been spidered into our own code. I didnt find TechCraft were easy to use as a standalone component as I have done with lidgren, Mercury or sgMotion (we've given a LOT back from our 2 games). Plus it was so complex I had probably done more damage before I actually fixed anything!</p>\r\n<p>Plus the fact that you guys all walked away left the project without a real direction too...&nbsp;</p>",
+    "PostedDate": "2012-03-15T16:56:42.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812293",
+    "ThreadId": "348096",
+    "Html": "<p>I feel your pain zman on the lighting front - just been watching your videos btw and the game looks awesome - i've been doing some research on better methods of dealing with the lighting issues recently. This project may come back to life at some stage if we can resolve the core problems which essentially caused it to stall&nbsp;- seeing it in use is definately inspiring me to look at the problems again.</p>",
+    "PostedDate": "2012-03-18T19:12:36.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

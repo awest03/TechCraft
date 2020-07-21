@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "606830",
+    "ThreadId": "256238",
+    "Html": "\r\n<p>Hi</p>\r\n<p>i was wondering if anyone can help me out with this error im getting? i am trying to open the source code but every time i try i get the error Unrecognized project. No adapter available. i have xna installed and also visual express 2008 thanks...</p>\r\n",
+    "PostedDate": "2011-05-03T20:52:10.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "606910",
+    "ThreadId": "256238",
+    "Html": "<p>You need xna 4.0 sdk + visual studio 2010.</p>",
+    "PostedDate": "2011-05-04T01:10:31.233-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827541",
+    "ThreadId": "256238",
+    "Html": "<p>Or you could download the 3.1 Version.</p>",
+    "PostedDate": "2012-04-23T13:58:58.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827831",
+    "ThreadId": "256238",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>jdrake3 wrote:</strong><br />\r\n<p>Or you could download the 3.1 Version.</p>\r\n</blockquote>\r\n<p>Yeah sure, if you want to run the oldest source :) The most recent one (which is pretty old anyways ) requires 4.0 .&nbsp;</p>",
+    "PostedDate": "2012-04-24T05:41:43.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "830010",
+    "ThreadId": "256238",
+    "Html": "<p>This sounds as though it may just be a problem with VS2008 reading the 2010 solution file.</p>\r\n<p>If you download the free Windows Phone version of visual studio 2010 (which i think is part of the WP7 sdk) you should be good to go.</p>",
+    "PostedDate": "2012-04-29T18:22:57.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

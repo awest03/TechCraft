@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "605407",
+    "ThreadId": "255850",
+    "Html": "\r\n<p>Hi Guys (and Girls)</p>\r\n<p>I wasn't liking it how at present the Engine makes assumptions about which keys / mouse clicks etc are used for specific actions (use left tool is Left Mouse Button etc).</p>\r\n<p>Soo.. &nbsp;If the following sounds like something of use to you, then I would love to contribute it to the project.</p>\r\n<p>Basically, I have created InputMapping functionaltiy within the Engine, so that&nbsp;rather than getting the Mouse, Keyboard, Gamepad state, and explicitly trying to detect if a particular button / key mouse button is pressed or is down, (like you do at\r\n the moment for tool usage or debug keys or whatever) Instead you would go through a new InputMapper class to ask if a particular action (An Enumerated Value) is Down or Pressed.</p>\r\n<p>This does mean the enums have to be created to represent the actions, i.e:-</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">public</span> <span style=\"color:blue\">enum</span> ToolAction: <span style=\"color:blue\">byte</span>\r\n{\r\nUseLeft,\r\nUseRight\r\n} </pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>And also the initial mapping has to be explicitly set, however in future I would like to add persistence methods to check for a default mapping on disk and load it if it exists.</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>            inputState = <span style=\"color:blue\">new</span> InputState&lt;DebugActions&gt;();\r\n            <span style=\"color:green\">//TODO: Add peristence methods to Load() existing mappings</span>\r\n            <span style=\"color:green\">// Just creating a default Map to use. Need to add Persistence methods, to be able to Save / Load maps.</span>\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.Exit, Keys.Escape);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.FreeCam, Keys.F1);\r\n            inputState.Mapping.SetMappedValue&lt;MouseButtons&gt;(DebugActions.ToggleFullScreen, MouseButtons.MiddleButton);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.FixedTimeStepPlusVSync, Keys.F3);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.DayMode, Keys.F9);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.NightMode, Keys.F10);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.ToggleRasterMode, Keys.F4);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.DiagnosticMode, Keys.F8);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.ReleaseMouse, Keys.F);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.ShowMinimap, Keys.M);\r\n            inputState.Mapping.SetMappedValue&lt;Keys&gt;(DebugActions.StealthMode, Keys.S);\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>I would also like to look at putting together a UI for the user to Create / Edit / Load / Save Mappings - so the benefits of having a mapping can actually be realised.</p>\r\n<p>Is this of interest to you?</p>\r\n",
+    "PostedDate": "2011-04-30T21:07:41.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605409",
+    "ThreadId": "255850",
+    "Html": "<p>Oh, and if you are interested, it may be easier if I can send you the source some how as I don't have source control set up with Codeproject :(</p>",
+    "PostedDate": "2011-04-30T21:12:18.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605499",
+    "ThreadId": "255850",
+    "Html": "<p>Interesting.</p>\r\n<p>My 2 cents :</p>\r\n<p>- dont bother with a UI , just use a .ini file</p>\r\n<p>- try making it text based, the string \"MouseButons.MiddleButton\" being able to infer the MouseButtons type ( with reflection).</p>\r\n<p>You can always send patches or samples at enomi dot enomi at g mail dot com.</p>\r\n<p>PS : there are inputstate management frameworks and libraries , its on my todo&nbsp; to check them, like the one in nuclex framework.</p>",
+    "PostedDate": "2011-05-01T07:12:27.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605511",
+    "ThreadId": "255850",
+    "Html": "<p>Thanks Enomi,</p>\r\n<p>Dagnammit! I thought there must be some frameworks out there for Input / Input mapping somewhere! My first googling session didn't give me any results though, so I thought how hard can it be right?</p>\r\n<p>I will take a look at the Nuclex stuff, see how they have done it, and I won't&nbsp;bother&nbsp;with a UI (thanks for that advice).</p>\r\n<p>What would the reasons be for making it text based though - i.e \"MouseButons.MiddleButton\" -&nbsp;&nbsp;I did consider this, but I don't want to let intellisense (and compile time checking) go if I can help it so that's why I made strong use of generics.&nbsp;</p>\r\n<p>Thank you :)</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-05-01T08:11:03.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605526",
+    "ThreadId": "255850",
+    "Html": "\r\n<p>Because you will need to parse it from the ini file as text anyways. To have the possibility to use a muse btn or keyboard indifferently</p>\r\n<p>On 2011-05-01 11:11 AM, &quot;darrelltunnell&quot; &lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt; wrote:<br>\r\n&gt;<br>\r\n&gt; From: darrelltunnell<br>\r\n&gt;<br>\r\n&gt; Thanks Enomi,<br>\r\n&gt;<br>\r\n&gt; Dagnammit! I thought there must be some frameworks out there for Input / Input mapping somewhere! My first googling session didn't give me any results though, so I thought how hard can it be right?<br>\r\n&gt;<br>\r\n&gt; I will take a look at the Nuclex stuff, see how they have done it, and I won't bother with a UI (thanks for that advice).<br>\r\n&gt;<br>\r\n&gt; What would the reasons be for making it text based though - i.e &quot;MouseButons.MiddleButton&quot; - I did consider this, but I don't want to let intellisense (and compile time checking) go if I can help it so that's why I made strong use of generics.\r\n<br>\r\n&gt;<br>\r\n&gt; Thank you :)<br>\r\n&gt;<br>\r\n&gt; <br>\r\n&gt;<br>\r\n&gt; <br>\r\n&gt;<br>\r\n&gt; <br>\r\n&gt;<br>\r\n&gt; Read the full discussion online.<br>\r\n&gt;<br>\r\n&gt; To add a post to this discussion, reply to this email (<a href=\"mailto:TechCraft@discussions.codeplex.com\">TechCraft@discussions.codeplex.com</a>)<br>\r\n&gt;<br>\r\n&gt; To start a new discussion for this project, email <a href=\"mailto:TechCraft@discussions.codeplex.com\">\r\nTechCraft@discussions.codeplex.com</a><br>\r\n&gt;<br>\r\n&gt; You are receiving this email because you subscribed to this discussion on CodePlex. You can unsubscribe or change your settings on codePlex.com.<br>\r\n&gt;<br>\r\n&gt; Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at\r\n<a href=\"http://codeplex.com\">codeplex.com</a></p>\r\n",
+    "PostedDate": "2011-05-01T09:21:28.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605560",
+    "ThreadId": "255850",
+    "Html": "<p>Ah true. I have a few ideas there though.</p>\r\n<p>Once it's done I'll email you a sample project and then maybe you can review it along side the other frameworks when you reach that stage of your to-do list! :)</p>\r\n<p>Kind Regards</p>\r\n<p>Darrell</p>",
+    "PostedDate": "2011-05-01T11:18:40.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605563",
+    "ThreadId": "255850",
+    "Html": "<p>Ok SCRAP THAT the nuclex stuff looks way more advanced. Think I'll wait to see what you guys implement and then just go with that.</p>\r\n<p>:'(</p>",
+    "PostedDate": "2011-05-01T11:29:09.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

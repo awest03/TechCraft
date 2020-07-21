@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "824334",
+    "ThreadId": "352423",
+    "Html": "<p>Hello,</p>\n<p>First of all, best for me probably would be to mention this link: <a href=\"http://www.minecraftforum.net/index.php?showtopic=330708\">http://www.minecraftforum.net/index.php?showtopic=330708</a></p>\n<p>It's a mod, that I've been working for quite a while now and that would initially add more 3D for Minecraft, but the thing is, that many people have been asking why I'm not making a game instead and recently I've been worried about the stability of Minecraft  itself, it has pretty huge limitations to my capabilities and then I remembered, that one guy said \"Why not use Unity and make a game\", which lead to MinePackage and afterward to TechCraft, so I would like to know about weather TechCraft could be used to make  a game instead of just a mod? From what I've looked through this project hasn't been updated for quite a while (since <span>May 3 2011</span>&nbsp;at <span>4:40 AM), which is almost a year ago. I would like to know weather this block engine project has been abandoned?</span></p>\n<p>Also I'm not a coder/programmer, but a designer, modeler, I could draw and model amazing things, but coding isn't the strongest part for me, so I have a few questions for you to ask:</p>\n<p>MinePackage worked outside of the box in Unity, but I have no idea how to make TechCraft work in Unity, how to?</p>\n<p>In another discussion I saw, that there is no save feature, how hard would it be to make a gui functional button, that does that?</p>\n<p>More questions would pop up if I would be able to make it work in unity</p>",
+    "PostedDate": "2012-04-16T04:03:09.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824341",
+    "ThreadId": "352423",
+    "Html": "<p>Hi Voldzito,</p>\r\n<p>I'll try to answer your questions as best I can:</p>\r\n<p>The project isn't abandoned. Simply, there was a private coding project during the second part of last year. Parts of the private project will eventually be added to this open source version. There isn't a set time for this, or a list of which features will be added. It's better to just monitor this project to receive notification of any updates.</p>\r\n<p>TechCraft won't work with Unity. TechCraft is written in C#, using the XNA 4.0 framework.</p>\r\n<p>Adding a GUI functional button would be some work. This is because XNA 4.0 doesn't include anything for displaying UI elements (buttons etc). A save feature would also require some work. It would most probably require C# coding.</p>",
+    "PostedDate": "2012-04-16T04:24:39.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824430",
+    "ThreadId": "352423",
+    "Html": "<p>Well, since I haven't been into Unity that much, though the UI is very appealing and easy to understand.&nbsp; I've been coding the mod in Eclipse and from the videos on YouTube XNA looks very similar, and before making that mod I had absolutely no experience  in Java coding, but since I've been desiging websites for quite a while and coding in general wasn't unfamiliar for me, since I knew most php/html/css and some turbo pascal (studied it a bit in university) and well now I can say, that I know basics of Java  as well now, because I'm a fast learner, so... since coding has some similar rules across all coding languages, how hard would it be for me to pick up XNA and C#, also I've heard most games use C++, any particular reason, why did you use C#?</p>\n<p>Edit:</p>\n<p>I've manage to set up TechCraft with XNA 4.0 framework, Visual # 2010 Express and XNAGS40, but it generates only a small area of blocks randomly generated, not like in the videos you posted. How can I make it generate more chunks based on player's location?</p>",
+    "PostedDate": "2012-04-16T07:59:50.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824700",
+    "ThreadId": "352423",
+    "Html": "<p>The XNA framework is relatively easy to code against, and I would say C# in general also. Especially if you have a background in coding, which you mention, it should have a short learning curve.</p>\r\n<p>The original TechCraft code is based loosely on Infiniminer, which was (is) coded in C#.</p>\r\n<p>&nbsp;</p>\r\n<p>The NewTake project has \"infinite\" procedural terrain. You will need to set it as Startup Project (right click it in the solution explorer (right pane in VS2010Express, and choose the menu option \"Set as Startup Project\".</p>",
+    "PostedDate": "2012-04-17T00:14:43.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824791",
+    "ThreadId": "352423",
+    "Html": "<p>Is it just me, but I can't find NewTake anywhere in the source code provided through this link http://techcraft.codeplex.com/SourceControl/list/changesets#</p>\r\n<p>I did manage to make new&nbsp; 64x64 textures (same resolution as in my mod) and changed the bazooka model to a sword model (exported obj format model with wings 3d to .x format), any tips where exactly the scaling is handled in the code for models? My project would require blocks to have custom shapes (slopes, arcs, columns, cylinders, cones, spheres) modeled in obj format and I'm guessing I will have to export them to .x format. Also changing two height variables allowed me to build up to 256 height (It's the new Minecraft's height limit by the way). And on top of that I think I found a programmer, that might be interested into helping me on the project, but he's unavailable till next week, since he's on vacation.</p>",
+    "PostedDate": "2012-04-17T04:33:55.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824807",
+    "ThreadId": "352423",
+    "Html": "<p>&nbsp;</p>\r\n<p>If you go here:</p>\r\n<p>http://techcraft.codeplex.com/SourceControl/list/changesets</p>\r\n<p>and click the download option in the latest version box on the right, it should give you the latest version.</p>\r\n<p>The NewTake project should be in the solution explorer.</p>\r\n<p>What scaling is it exactly that you are looking for?</p>",
+    "PostedDate": "2012-04-17T05:00:11.25-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824830",
+    "ThreadId": "352423",
+    "Html": "<p>Well in Minecraft java I could scale the object uniformly by code using GL11.glScalef(0.5F, 0.5F, 0.5F); for OpenGL, is there something similar for DirectX ? Also by code it was made, so that upon rendering a model you could change uniform scale MODEL.render(entity, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 0.0625F /* SCALE*/);</p>",
+    "PostedDate": "2012-04-17T05:54:40.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824833",
+    "ThreadId": "352423",
+    "Html": "<p>&gt;My project would require blocks to have custom shapes (slopes, arcs, columns, cylinders, cones, spheres)&nbsp;</p>\r\n<p>Sorry to curb your enthusiasm but the engine is for cubes only, slopes etc = code a brand new engine.</p>",
+    "PostedDate": "2012-04-17T05:56:50.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824836",
+    "ThreadId": "352423",
+    "Html": "<p>You can use the CreateScale method:</p>\r\n<p>http://msdn.microsoft.com/en-us/library/bb195692.aspx</p>\r\n<p>&nbsp;</p>\r\n<p>Enomi is correct. The TechCraft engine here will only handle/generate regular cubes, hexahedrons.</p>\r\n<p>If you are importing your own custom shape models, you can place them as you like together with the generated cubes, to achieve the shapes you mention.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-04-17T06:02:19.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824904",
+    "ThreadId": "352423",
+    "Html": "<p><span style=\"color: #808080;\"><em>\"Enomi is correct. The TechCraft engine here will only handle/generate regular cubes, hexahedrons.</em></span></p>\n<p><span style=\"color: #808080;\"><em>If you are importing your own custom shape models, you can place them as you like together with the generated cubes, to achieve the shapes you mention.\"</em></span></p>\n<p>Well that was one of my ideas on how to achieve that, and I managed to get the NewTake project working as well, love the fact, that you can have differently colored light sources. Until next week I'm looking through how the engine works, what are its upsides  and downsides, would it be fit for my requirements and if the guy decides to help me out, we will most surely take a more serious approach to this and will go through all our options, but for now I can say, that you have done a great job, it's done well  from my viewpoint, although there are some loose ends, such as lighting data not being removed after the light source block has been, so that that area is still receiving light data without that block (flowers), snow generating above thin air on corners of cliffs without a supporting block below it, the NewCraft comparing to TechCraft has removed effects while underwater, no visual output on selected bock - aside from a chunk based terrain generation, NewCraft is heavily nerfed TechCraft. Also NewCraft takes a much longer time to load up than TechCraft.</p>",
+    "PostedDate": "2012-04-17T07:56:21.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "830011",
+    "ThreadId": "352423",
+    "Html": "<p>It is technically possible to pull non standard shapes into a modified Techcraft - i did it myself a long while ago when i was playing around (i may have the code somewhere - i'll look). What i basically did was make a custom model importer which just ripped the vertex data from an appropriately scaled model and stored it in a list. When you're building the vertex data for a chunk if you hit a custom block you just dump the vertex data from the appropriate list into the stream. BUT (and it's a reasonably big but) the only way for this to work is to change from using a texture atlas to using individual textures for each block type otherwise you're in a world of pain trying to remap the UV data for the model (although i guess it's possible). This would require a fair bit of work on the engine and rewriting parts of the shaders.</p>\r\n<p>I'd also point out that there are numerous technical issues with the Techcraft engine as it stands for any project of the scale you're suggesting from the look of your MC mod. Firstly is the lack of a multithreaded loader for chunks which is something you would definately need and second is the fact that the current chunk loading strategy isn't very good which leads to a lot of the chunk edge lighting issues - you would need to have a programmer confident to re-implement both of these before i would recommend investing a significant amount of time.</p>",
+    "PostedDate": "2012-04-29T18:39:39.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

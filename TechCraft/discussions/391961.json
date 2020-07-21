@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "900352",
+    "ThreadId": "391961",
+    "Html": "\r\n<p>I finally got the source code up in Visual Studio but I am not sure what to do from here. I've only had about a year of programming experience with C&#43;&#43; and couldn't find any way to run anything from the source code (like with Ctrl-F5). Even&nbsp;a quick\r\n comment as to how I can learn to use this would be greatly appreciated, as I am not quite sure what the code does specifically.</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2012-08-16T22:09:04.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "901517",
+    "ThreadId": "391961",
+    "Html": "<p>Download the release source from the Downloads tab above - extract the Zip file and navigate to the extracted files and into the Techcraft folder. You should see 2 folders and a VS solution file - Open the solution file with Visual Studio and run the project. (Ctrl F5) - should just run.</p>\r\n<p>If you're unsure about how to get the project to run i would suggest that Techcraft isn't really the best project to start learning C#/XNA with - I'd start by going the the Microsoft XBLIG website and downloading some of the examples on there&nbsp;<a href=\"http://xbox.create.msdn.com/en-us\">http://xbox.create.msdn.com/en-us</a>. Also the tutorials written by Riemer are a way a lot of people got into XNA&nbsp;<a href=\"http://www.riemers.net/\">http://www.riemers.net/</a></p>",
+    "PostedDate": "2012-08-20T06:09:18.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

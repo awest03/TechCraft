@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nThanks for your hard work thus far, the project is looking really cool.\r\n\r\nYou are probably already aware of this, but just in case:\r\n\r\nOutOfMemoryException - Scenario 1\r\n\r\nTo produce the error: \r\n\r\nSet the IChunkGenerator for the world to SimpleTerrain, run the project, hit F1 to enter free fly mode, then just head in the same direction accross the map, after about a minute, with 6GB's of Ram in my machine, I get an OutOfMemoryException (screenshot attached) in the VertexBuildChunkProcessor class - AddVertex method.\r\n\r\nOutOfMemoryException - Scenario 2\r\n\r\nRepeat Scenario 1, but with the FlatReferenceTerrain. This time the OutOfMemoryException i'm getting is occurring in the Chunk class contructor where it creates the Blocks array.\r\n\r\nThe infinite terrain concept is really cool, but not if so much chunk / vertex memory accrues that it halts the game! :(\r\n\r\n",
+    "LastUpdatedDate": "2012-09-10T21:33:19.837-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-04-29T06:03:38.46-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "NewTake - Out of Memory Exceptions",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 15
+  },
+  "FileAttachments": [
+    {
+      "FileId": 233815,
+      "FileName": "OutOfMemoryException.PNG",
+      "DownloadUrl": ".\\233815"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "- Sorry, my bad. For some reason, i thought this stuff was in alpha. Apologies.",
+      "PostedDate": "2011-04-30T09:40:36.377-07:00",
+      "Id": 35051
+    },
+    {
+      "Message": "Not a problem! We're working on this at the moment",
+      "PostedDate": "2011-04-30T14:42:44.283-07:00",
+      "Id": 35054
+    }
+  ]
+}

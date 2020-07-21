@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "688014",
+    "ThreadId": "276867",
+    "Html": "\r\n<p>Hi everyone.</p>\r\n<p>I want to delete smooth lighting, because I think it's the reason of low fps. In other games I have more fps.</p>\r\n<p>Can you tell me how to make simple lighting like in Minecraft but during the alpha?</p>\r\n<p>Something like this:&nbsp;<a href=\"http://static.accelerated-ideas.com/news/images/top_10_minecraft_mods.jpg\">http://static.accelerated-ideas.com/news/images/top_10_minecraft_mods.jpg</a></p>\r\n<p>Like the shadow is going to be darkness on each block.</p>\r\n<p>Sorry for bad English.</p>\r\n<p>Help me please.</p>\r\n",
+    "PostedDate": "2011-10-23T02:50:31.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689379",
+    "ThreadId": "276867",
+    "Html": "<p>If you go back to the earlier code - around this changeset i think&nbsp;<a href=\"http://techcraft.codeplex.com/SourceControl/changeset/changes/b27c7b631fb3\">http://techcraft.codeplex.com/SourceControl/changeset/changes/b27c7b631fb3</a>&nbsp;you should be able to see  how to do standard lighting. You're right that the smooth lighting/ao is a big problem with the way this engine is implemented. The issue is that it is dependant on all the surrounding blocks and the way blocks and chunks are managed in this code makes that  quite time consuming. This engine was initially developed from looking at the way infiniminer worked but that technique isn't really scalable for things like smooth lighting and ao.</p>\n<p>The basic lighting works as follows - for each vertical row in a chunk propogate the light downwards from the sky setting the light value of each block to the sun maximun (16) until you hit the first solid block - then for each block in the chunk which has  a non zero light value propogate the light outwards using a flood fill reducing the light value each step. This is all the same in the current code if you remove all the rgb light stuff. The main code you need to change is when building the cube face vertices  instead of getting the light values from all the surrounding blocks simply use the light value from the block directly adjoining the face.</p>\n<p>The main issue with FPS in this code though is that the chunk generation, lighting and game update all run on a single thread. To maintain a solid fps you would need to offload the generation and lighting onto another thread so it is done in the background. This is pretty much the main reason development on this code stalled - again the way the chunks are managed made that pretty much a nightmare to do - we tried all sorts of ways but never got something satisfactory which didn't have lighting 'glitches'. If you go back even a couple changesets from the current head revision you can see some of the various experiments that were tried, we removed the multithreading when we stopped working on this code in order to leave the project in a state that wasn't buggy.</p>",
+    "PostedDate": "2011-10-25T17:55:03.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "695549",
+    "ThreadId": "276867",
+    "Html": "<p>What was your reason for scrapping the deferred rendering?&nbsp; Did you notice a performance hit?</p>",
+    "PostedDate": "2011-11-08T13:45:50.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702403",
+    "ThreadId": "276867",
+    "Html": "<p>There is definately a peformance hit with deferred lighting since the scene is rendered 4 times, however the main reason was that i used Sunburn for the lighting and didn't want a dependancy for that in the open source version.</p>",
+    "PostedDate": "2011-11-23T08:00:36.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

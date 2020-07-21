@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "595078",
+    "ThreadId": "253349",
+    "Html": "<p>Took a stab at implementing Conway's Game of Life in TechCraft.</p>\n<p>It has a ways to go but you can see the results so far on</p>\n<p><a href=\"http://www.youtube.com/watch?v=6vrFaFKqYk0\">YouTube</a> - sorry about the dead ~10 seconds at the start</p>",
+    "PostedDate": "2011-04-10T22:20:33.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595155",
+    "ThreadId": "253349",
+    "Html": "<p>I like it - nice one.</p>\r\n<p>I'd be interested in seeing code for this since i reckon something similar can be extended to do the water flow.</p>",
+    "PostedDate": "2011-04-11T01:23:26.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595294",
+    "ThreadId": "253349",
+    "Html": "<p>It's funny you mention that. I had a \"bug\" where neighbors were improperly being checked and ended up with a plane that grew outwards in a cube in each direction at a time. Let me clean up the code a little bit and then I will post it.</p>",
+    "PostedDate": "2011-04-11T06:55:54.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595451",
+    "ThreadId": "253349",
+    "Html": "<p>Here is a zip with the code - haven't had a chance to do much to it yet</p>\r\n<p>&nbsp;</p>\r\n<p>&lt;<a href=\"http://dl.dropbox.com/u/25936045/techcraft%20-%20Conway.zip\">techcraft%20-%20Conway.zip</a></p>",
+    "PostedDate": "2011-04-11T10:46:32.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

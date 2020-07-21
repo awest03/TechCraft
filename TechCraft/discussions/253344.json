@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "595065",
+    "ThreadId": "253344",
+    "Html": "<p>In my last commit &amp;&nbsp;push, I updated the optimization of&nbsp;the Y loop&nbsp;on chunks with chunk.lowestNoneBlock and chunk.highestSolidBlock.</p>\n<p>Now buildVertexList takes <strong>2.1 ms</strong> on average, and this version of the project has trees , previous one was more flat !&nbsp;</p>\n<p>Profile often, profile early, cause at first i was mistakenly looping between chunk.highestSolidBlock and chunk.lowestSOLIDBlock&nbsp;and getting ... 18 ms !</p>\n<p>So if i summarize the evolution of this optimisation :</p>\n<p>looping always from 0 to max : 18 ms</p>\n<p>looping from lowest empty to max : 4.6 ms ( not so bad)</p>\n<p>looping from lowest&nbsp;solid to highest solid: 18 ms =&gt; very bad regression !</p>\n<p>looping from lowest&nbsp;empty to&nbsp;highest solid:&nbsp;2.1 ms</p>\n<p>------</p>\n<p>Next step on the same subject would be to avoid building vertice for inaccessible caves, with some sort of pathfinding through empty blocks.</p>\n<p>This may not be worth the milisecond and&nbsp;may adversely impact the terrain gen ( cause all those optimizations are&nbsp;done while generating the blocks).</p>\n<p>---------</p>\n<p>Another&nbsp;optimization&nbsp;would be trying to do all vector operations with xna vector3, &nbsp;because it&nbsp;s able to use&nbsp;SSE (&nbsp;=&nbsp;operating on x, y and&nbsp;z at the same time ) , maybe even rewriting the perlin noise class to use vector3&nbsp;or finding another impl that already&nbsp;uses that. &nbsp;</p>\n<p>(I use eqatec profiler in release mode, very easy to use )</p>",
+    "PostedDate": "2011-04-10T20:48:10.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595077",
+    "ThreadId": "253344",
+    "Html": "<p>This is looking great!</p>\r\n<p>I will have to look into eqatec and maybe the vector3 conversion, can't be that hard... right? :) .</p>\r\n<p>nProf didn't seem to want to play nice (read somewhere that it could have been due to threads not exiting properly)</p>",
+    "PostedDate": "2011-04-10T22:15:02.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "610681",
+    "ThreadId": "257140",
+    "Html": "\r\n<p>First i would like to say thank you for the awesome work put into this project.</p>\r\n<p>&nbsp;</p>\r\n<p>I'm currently a game development student and was looking to do something quite close to this.&nbsp; Most of the ground work is already laid out for me, so thanks for that.</p>\r\n<p>I tried to see if anyone was in the IRC chat room hanging out alas no avail there.&nbsp; However onto my question now, which is a simple yet possibly difficult one at the same time.</p>\r\n<p>&nbsp;</p>\r\n<p>I've taken physics and 3d math so i understand most of the mathematics behind this.&nbsp; I would like to understand what exactly we are doing with the code before i jump in and try to modify anything or break down into what i need.&nbsp; I guess my newbie\r\n programming side is coming out because i can't seem to find where to start and what to move onto when looking at this code, what was built first and following it through.. I guess i could just randomly start somewhere and look through it and have that ah-ha\r\n moment where everything comes together but i have not one clue at this moment.</p>\r\n<p>i'm not asking for what each line does, but just a quick point in the right direction would be grateful.</p>\r\n",
+    "PostedDate": "2011-05-10T19:00:51.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610710",
+    "ThreadId": "257140",
+    "Html": "<p>Hello and welcome . &nbsp;a quick answer, &nbsp;as its quite late for me :&nbsp;&nbsp;be sure to look at the NewTake project,&nbsp; download the latest entry in the source code tab .&nbsp; start from the Model/* classes and&nbsp;&nbsp;SimpleRenderer.cs .</p>\r\n<p>I think the best way to learn and to appreciate&nbsp;our code is to try to write&nbsp;your own block world from scratch, starting with a very naive implementation drawing all faces of all cubes.&nbsp;&nbsp;</p>\r\n<p>Good luck !</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-05-10T21:17:43.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "611068",
+    "ThreadId": "257140",
+    "Html": "<blockquote style=\"border: 0.1em solid #cccccc; font-style: italic; margin: 0.25em 1em 0pt; padding: 0pt 0.25em;\"><strong>enomi wrote:</strong><br />\r\n<p>Hello and welcome . &nbsp;a quick answer, &nbsp;as its quite late for me :&nbsp;&nbsp;be sure to look at the NewTake project,&nbsp; download the latest entry in the source code tab .&nbsp; start from the Model/* classes and&nbsp;&nbsp;SimpleRenderer.cs .</p>\r\n<p>I think the best way to learn and to appreciate&nbsp;our code is to try to write&nbsp;your own block world from scratch, starting with a very naive implementation drawing all faces of all cubes.&nbsp;&nbsp;</p>\r\n<p>Good luck !</p>\r\n<p>&nbsp;</p>\r\n</blockquote>\r\n<p>Thanks for the help, i was not able to locate \"SimpleRenderer.cs in the project i downloaded it from the February 4.0 conversion release.</p>\r\n<p>The only render file i could find was cube render (is this the same?)</p>\r\n<p>thanks again.</p>",
+    "PostedDate": "2011-05-11T10:09:30.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "611072",
+    "ThreadId": "257140",
+    "Html": "<p>be sure to look at the NewTake project,&nbsp; download the latest entry in the source code tab</p>\n<p>here :</p>\n<p><a title=\"http://techcraft.codeplex.com/SourceControl/changeset/changes/5c1888588e5d\" href=\"http://techcraft.codeplex.com/SourceControl/changeset/changes/5c1888588e5d\">http://techcraft.codeplex.com/SourceControl/changeset/changes/5c1888588e5d</a></p>\n<p>click the download link with the small floppy disk icon</p>",
+    "PostedDate": "2011-05-11T10:21:34.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "616504",
+    "ThreadId": "257140",
+    "Html": "<p>What is the concept and purpose behind vector3i and vector3b?</p>",
+    "PostedDate": "2011-05-22T17:39:08.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "616516",
+    "ThreadId": "257140",
+    "Html": "<p>- Use less memory , especially for the byte version</p>\r\n<p>- avoid bugs&nbsp;where you mix block world coordinates / chunk world coords / float coords.</p>\r\n<p>- generally force us to think about what kind of coords we use !</p>\r\n<p>- maybe a small performance gain when multiplying and&nbsp;dividing ints vs floats, but its not sure, and very difficult to check.</p>",
+    "PostedDate": "2011-05-22T18:58:03.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

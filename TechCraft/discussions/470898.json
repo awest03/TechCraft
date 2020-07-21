@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1128118",
+    "ThreadId": "470898",
+    "Html": "I've been messing around with the engine and adding my own tweaks and features. I must say that I really really love this. I've never used XNA before, but this project has kinda given me a foundation to learn it on. If this project isn't under construction anymore, can I submit patches or anything for it? I'd love to develop and add my own features. I understand that this is only an engine and not a full fledged game, but there are a lot of things this engine could use (finite/infinite water switch, a block ID system or a way of adding new blocks from the game project instead of the engine project (there may already be a way to do this that I haven't found), more controls such as crouching and sprinting, non-infinite jumping, etc). If you would, please reply! Thanks!\r<br />\n<br />\n~ Blake<br />\n",
+    "PostedDate": "2013-11-22T20:44:00.29-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128523",
+    "ThreadId": "470898",
+    "Html": "Hi,\r<br />\n<br />\nAs one of the developers of this engine, I can say that it isn't currently under further development. Each of us who developed this engine are still very much active in game development though, and have been involved in other projects since writing this.\r<br />\n<br />\nYou are more than welcome to fork this code and submit patches.<br />\n",
+    "PostedDate": "2013-11-24T21:26:27.373-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

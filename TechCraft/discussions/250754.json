@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "584640",
+    "ThreadId": "250754",
+    "Html": "\r\n<p>No, seriously, thanks, does it have a license? you did a very good job</p>\r\n",
+    "PostedDate": "2011-03-22T14:49:33.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "584703",
+    "ThreadId": "250754",
+    "Html": "<p>Yeah, the license is \"the first one who gets rich with this code has to give a cool&nbsp;job to the other contributors ;) \"</p>\r\n<p>Seriously, it s MS PL, microsoft public / permissive license, read it here <a href=\"http://techcraft.codeplex.com/license\">http://techcraft.codeplex.com/license</a>,&nbsp;&nbsp;you can use the code&nbsp;commercially .&nbsp;</p>",
+    "PostedDate": "2011-03-22T18:06:36.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "584972",
+    "ThreadId": "250754",
+    "Html": "<p>Ok thanks... but crap now i have a problem with C# express 2010, the window isnt refreshing itself for a reason :( Is it a known issue? i tried to google it but without success</p>",
+    "PostedDate": "2011-03-23T05:50:12.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

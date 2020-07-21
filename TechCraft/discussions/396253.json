@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "915180",
+    "ThreadId": "396253",
+    "Html": "\r\n<p>How to place light source?</p>\r\n",
+    "PostedDate": "2012-09-20T07:09:18.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "917411",
+    "ThreadId": "396253",
+    "Html": "<p>I'm assuming you're using the NewTake latest source rather than the much earlier .Net 4 conversion which doesn't have the coloured lighting.</p>\r\n<p>At the moment the lighting is hardwired to the RedFlower blocktype which you can cause to be added in the terrain generator you are using - I think by default it uses model/terrain/biome/duallayerterrainwithvalleysforrivers.cs (Some very descriptive class naming there from someone). Flowers are added in the GenerateTreesFlowers method.&nbsp;</p>\r\n<p>The actual lighting is then done in the view/processors/lightingchunkprocessor.cs in the ClearLighting method.&nbsp;</p>\r\n<p>In the current engine the lighting is as i say hardwired to that block type a nicer way to do it would be to add a couple of methods to BlockInformation.cs&nbsp;</p>\r\n<p>IsEmissive and GetEmissiveColor which can then be used to determine if any block should emit light and which color of light it emits and use the results of these in the ClearLighting method.</p>\r\n<p>We stopped development on the current version of the engine pending a complete rethink of the structure and mechanics of the engine and developed a replacement for Techcraft (which we will release here at some point), this is why the lighting code contains such horrible things as the hardwired RedFlower block type. &nbsp;</p>\r\n<p>Hope this helps - feel free to contact me here or on sunburn if you need more info</p>\r\n<p>S.</p>",
+    "PostedDate": "2012-09-25T11:32:47.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

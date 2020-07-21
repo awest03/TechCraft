@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "[13:24] <raistlinthewiz> why not we just store the relational coordinate and let real position calculated in HLSL?\r\n[13:25] <raistlinthewiz> i did not tried this on my own but know someone who did implemented this way\r\n[13:25] <raistlinthewiz> so in his vertex format, he can just store the relative position array in a Vector3Byte\r\n[13:26] <raistlinthewiz> where we currently use a Vector3, or a Vector3Int",
+    "LastUpdatedDate": "2011-04-05T23:50:51.64-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-03-31T11:01:00.09-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "use relational coordinate and let real position calculated in HLSL?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 11
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

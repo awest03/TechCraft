@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "839845",
+    "ThreadId": "356828",
+    "Html": "\r\n<p>My friend and I recently decided to get into game design and development. However neither of us are Above Average when it comes to coding, especially in C#, he's in college still for Game Design and has only took the intro course to VB.Net and C&#43;&#43;, I had\r\n the intro course to VB.Net when I was in college. So bare with me as I explain the issue I'm having.<br>\r\n<br>\r\nI downloaded the source files, having already installed XNA 4.0 Refresh and worked with it a little by following a tutorial. I extracted the files to the desired folder and then opened the\r\n<strong>TechCraft4.0.csproj</strong> in VS 2010 Professional, I then added the <strong>\r\nTechCraft4.0Content.contentproj </strong>file as an existing object. <br>\r\n<br>\r\nWhen I go to debug the project/game I get an error that says &quot;<strong>ContentLoadException File Not Found</strong>&quot; on '<strong>Fonts\\\\console.spritefont</strong>' . I checked the\r\n<strong><em>bin\\x86\\Debug\\Fonts\\</em></strong> folder to see if the file was being copied or compiled as it should be and it's not there.<br>\r\n<br>\r\nHow can I resolve this error? <br>\r\n<br>\r\nThe &quot;NewTake&quot; game Debugs fine however I can only move around destroying things? Not sure if there's supposed to be more there, then again I've not setup XNA with my 360 either so.<br>\r\n<br>\r\n<br>\r\n<br>\r\n<strong>Edit:&nbsp; </strong>I deleted the extracted files and extracted them again, then did exactly what I did up there and it no longer errors on the\r\n<strong>console.spritefont</strong> file, instead it errors on - <br>\r\n<br>\r\n</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre> blank = game.Content.Load&lt;Texture2D&gt;(<span style=\"color:#a31515\">&quot;Textures\\\\blank&quot;</span>);\n</pre>\r\n</div>\r\n<p></p>\r\n<p>I don't see a file in the Content folder labeled blank and I'm not sure what kind of file it should be..</p>\r\n",
+    "PostedDate": "2012-05-23T04:27:23.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

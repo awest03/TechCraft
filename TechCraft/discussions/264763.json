@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "640813",
+    "ThreadId": "264763",
+    "Html": "\r\n<p>I made some generated texture quads, I was thinking of making some minecraft and maybe oss is the way to go? Anyways if anyones working on this maybe I'll port my cube gen and use some other tricks, although if anyone's doing anything specific or wants to\r\n team up, one option would be to make a c# website (i love using microsoft tools and c#) and doing things like making a cube repository, and maybe a 3d voxel modeler like creative mode with an oss uploading area and rating and more....a coordination website\r\n since i think minecraft is kinda weak in many ways and there's a solid modding community for it that notch is ignoring and obfuscating against, plus the java 3d is very slow....</p>\r\n<p>&nbsp;</p>\r\n<p>Be nice to integrate some other oss into it too, like a gun engine or other 3d engine &#43; cube engine maybe something like ogre 3d &#43; this....or the c# ogre3d , i think that's irrlicht or something, anyways is anyone working on this or am I talking to myself\r\n again?</p>\r\n",
+    "PostedDate": "2011-07-11T19:53:49.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

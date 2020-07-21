@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2011-04-28T17:43:05.52-07:00",
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Reimplement blocks lighting",
+    "LastUpdatedDate": "2017-11-28T06:57:25.97-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-03-31T07:13:22.087-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Lighting ",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 7
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": " http://blokworld.forumotion.co.uk/t6-lighting-technique",
+      "PostedDate": "2011-04-11T11:39:17.04-07:00",
+      "Id": 33966
+    }
+  ]
+}

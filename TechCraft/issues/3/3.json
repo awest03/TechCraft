@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "bamyazi attached an example solving this issue",
+    "ClosedDate": "2011-03-31T07:15:35.81-07:00",
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hi Guys,\r\n\r\nFirst, huge thanks for this really great project. The work you've done is really helpful to us novice coder types!\r\n\r\nI know Bam said that originally this engine was working with sunburn, any chance you can lend some pointers on how to go about getting the engine to run with sunburn lighting?\r\n\r\nWould anyone have any example projects? Specifically I'm not sure what or where I should be looking for the actual voxel that needs to be submitted to sunburn for rendering.\r\n\r\nBasically any help you could provide in the right direction would be really appreciated!\r\n\r\nThanks again, I hope to one day be a contributing member to this project as I think it's really awesome!\r\n\r\n~Kris",
+    "LastUpdatedDate": "2011-03-31T07:15:35.81-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "TechCraft",
+    "ReportedDate": "2011-02-26T13:55:51.297-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Tips on using sunburn with this awesome engine?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3
+  },
+  "FileAttachments": [
+    {
+      "FileId": 212165,
+      "FileName": "Blox.rar",
+      "DownloadUrl": ".\\212165"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "made workitems of all your suggestions, maybe we ll implement them all a day :)",
+      "PostedDate": "2011-02-26T13:57:11.593-08:00",
+      "Id": 29678
+    },
+    {
+      "Message": "Hi all, i have another experimental variation on this engine which uses sunburn deferred lighting, high res textures and normal maps it also has support for non cube based blocks (its XNA 3.2 again i'm afraid). It was bit of a failed experiment and too slow for what i wanted to do at the time so i shelved it. I'm very busy at the moment trying to get my game actually finished and onto XBLIG otherwise i'd post some better information, but this should let you see how you could convert this engine to use sunburn. When you run the project if you can't see anything it's because the camera starts off pointing the wrong way - wiggle the mouse around and you should find the blocks. Basically each Region maintains a set of sunburn scene objects rather than basic vertex buffers. I've attached the source project - you'll probably need to mess around with the references to get it to work. Hopefully it should help.",
+      "PostedDate": "2011-02-27T12:59:45.863-08:00",
+      "Id": 29708
+    },
+    {
+      "Message": "Great Thanks Bamyazi! I will check this out tonight after work. Thanks a lot. :)",
+      "PostedDate": "2011-02-28T05:43:36.353-08:00",
+      "Id": 29733
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "865905",
+    "ThreadId": "367254",
+    "Html": "\r\n<p>hello everyone, first wanted to talk, I'm brazilian and sorry for any mistake in writing. :).My doubts would be as follows, as I can disable the grid in the game, I took a print to explain better.<br>\r\n<span style=\"color:#ff0000\"><span style=\"color:#0000ff\">&nbsp;</span></span></p>\r\n<p><span style=\"color:#ff0000\"><span style=\"color:#0000ff\">link:</span> http://imageshack.us/photo/my-images/20/gridx.png/</span></p>\r\n<p>It is possible to also reduce the size of the blocks? if possible what should I do?<br>\r\n<br>\r\nI really liked their work in xna!!</p>\r\n",
+    "PostedDate": "2012-07-13T22:33:11.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894916",
+    "ThreadId": "367254",
+    "Html": "<p>Hi,</p>\r\n<p>I have to admit i really don't know what is causing the grid in the image you posted - it looks like it may be a precision issue with your graphics card. The only thing i can suggest is perhaps playing around with the graphics settings a bit - change the resolution or disable antialiasing etc to see if any of them have any effect.</p>\r\n<p>You can effectively reduce the size of the blocks simply by moving the camera further away. ie - at present the blocks are 1m x 1m so the camera eye level is 1.7m above the ground to simulate the height of an average person. If you place the camera 8.5m above the ground then the blocks will appear to have an effective size of around 0.2m x 0.2m.&nbsp;</p>\r\n<p>eg.&nbsp;http://www.youtube.com/watch?v=n_M9JI8htJ4 this is a very similar engine to techcraft but with the camera placed much further away even though the cubes are still 1unit x 1unit they appear to be much smaller.</p>",
+    "PostedDate": "2012-08-02T15:17:23.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "898883",
+    "ThreadId": "367254",
+    "Html": "<p>Thanks&nbsp;<span><span><a class=\"UserProfileLink\" href=\"http://www.codeplex.com/site/users/view/bamyazi\">bamyazi</a>, your help very,&nbsp;solved the problem was the video card.&nbsp;Sorry for not having responded :D</span></span></p>",
+    "PostedDate": "2012-08-13T12:02:44.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "898914",
+    "ThreadId": "367254",
+    "Html": "<p>you give-me example of code of the camera?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-08-13T14:04:07.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "899365",
+    "ThreadId": "367254",
+    "Html": "<p>I'm afraid with engine as it stands it's not that simple - the position of the camera is set in the playercontroller (i think i don't have the code to hand) and you can just add a Y offset to the camera position to move it - BUT the rest of the engine is designed in such a way that it expects the camera to be where it is so if you do this that the camera will move through the terrain or you'll jump and your head will move into blocks etc so there is a LOT of work to do and there are various places in the code i've done evil things like using hard coded values for positions which means that you'll basically have to plough through the code and hunt for them.</p>",
+    "PostedDate": "2012-08-14T18:33:14.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "637827",
+    "ThreadId": "264014",
+    "Html": "\r\n<p>It is to my knowledge that the Techcraft engine current utilizes Simplex Noise.</p>\r\n<p>I don't know if the private rewrite uses Simplex too, but I would highly suggest switching over the Perlin Noise, simply because at 2 and 3 dimensions, Perlin Noise is faster than Simplex. &nbsp;The computation cost for Perlin Noise is 2^i, while Simplex\r\n Noise is i^2. &nbsp;While there is no performance gain at two dimensions, at three dimensions, Perlin noise is 8, while Simplex noise is 9.</p>\r\n<p>Also, Perlin Noise apparently fits block games better, I forget why, but I remember it has something to do with the algorithm it uses, and how Simplex uses triangles.</p>\r\n<p>I've created a class based on Ken Perlin's actual implementation of Improved Noise (<a href=\"http://mrl.nyu.edu/~perlin/noise/\">http://mrl.nyu.edu/~perlin/noise/</a>)</p>\r\n<p>&nbsp;</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">public</span> <span style=\"color:blue\">class</span> PerlinNoise \r\n    { \r\n        <span style=\"color:blue\">private</span> <span style=\"color:blue\">int</span>[] permutations = <span style=\"color:blue\">new</span> <span style=\"color:blue\">int</span>[512]; \r\n           \r\n        <span style=\"color:blue\">private</span> Random random; \r\n \r\n        <span style=\"color:blue\">public</span> PerlinNoise() \r\n            : <span style=\"color:blue\">this</span>(Environment.TickCount) \r\n        { } \r\n \r\n        <span style=\"color:blue\">public</span> PerlinNoise(<span style=\"color:blue\">int</span> seed) \r\n        { \r\n            random = <span style=\"color:blue\">new</span> Random(seed); \r\n \r\n            <span style=\"color:blue\">for</span> (<span style=\"color:blue\">int</span> i = 0; i &lt; 256; i&#43;&#43;) \r\n            { \r\n                permutations[i] = i; \r\n            } \r\n \r\n            <span style=\"color:blue\">for</span> (<span style=\"color:blue\">int</span> i = 0; i &lt; 256; i&#43;&#43;) \r\n            { \r\n                <span style=\"color:blue\">int</span> k = random.Next(256 - i) &#43; i; \r\n \r\n                <span style=\"color:blue\">int</span> l = permutations[i]; \r\n \r\n                permutations[i] = permutations[k]; \r\n                permutations[k] = l; \r\n                permutations[i &#43; 256] = permutations[i]; \r\n            } \r\n        } \r\n \r\n        <span style=\"color:blue\">private</span> <span style=\"color:blue\">int</span> fastfloor(<span style=\"color:blue\">float</span> x) \r\n        { \r\n            <span style=\"color:blue\">return</span> x &gt; 0 ? (<span style=\"color:blue\">int</span>)x : (<span style=\"color:blue\">int</span>)x - 1; \r\n        } \r\n \r\n        <span style=\"color:blue\">private</span> <span style=\"color:blue\">float</span> fade(<span style=\"color:blue\">float</span> t) \r\n        { \r\n            <span style=\"color:blue\">return</span> t * t * t * (t * (t * 6 - 15) &#43; 10); \r\n        } \r\n \r\n        <span style=\"color:blue\">private</span> <span style=\"color:blue\">float</span> lerp(<span style=\"color:blue\">float</span> t, <span style=\"color:blue\">float</span> a, <span style=\"color:blue\">float</span> b) \r\n        { \r\n            <span style=\"color:blue\">return</span> a &#43; t * (b - a); \r\n        } \r\n \r\n        <span style=\"color:blue\">public</span> <span style=\"color:blue\">float</span> grad(<span style=\"color:blue\">int</span> hash, <span style=\"color:blue\">float</span> x, <span style=\"color:blue\">float</span> y, <span style=\"color:blue\">float</span> z) \r\n        { \r\n            <span style=\"color:blue\">int</span> h = hash &amp; 15; \r\n \r\n            <span style=\"color:blue\">float</span> u = h &lt; 8 ? x : y, \r\n                v = h &lt; 4 ? y : h == 12 || h == 14 ? x : z; \r\n \r\n            <span style=\"color:blue\">return</span> ((h &amp; 1) == 0 ? u : -u) &#43; ((h &amp; 2) == 0 ? v : -v); \r\n        } \r\n \r\n        <span style=\"color:blue\">public</span> <span style=\"color:blue\">float</span> noise3d(<span style=\"color:blue\">float</span> x, <span style=\"color:blue\">float</span> y, <span style=\"color:blue\">float</span> z) \r\n        { \r\n            <span style=\"color:blue\">int</span> X = fastfloor(x) &amp; 0xff, \r\n                Y = fastfloor(y) &amp; 0xff, \r\n                Z = fastfloor(z) &amp; 0xff; \r\n \r\n            x -= fastfloor(x); \r\n            y -= fastfloor(y); \r\n            z -= fastfloor(z); \r\n \r\n            <span style=\"color:blue\">float</span> u = fade(x); \r\n            <span style=\"color:blue\">float</span> v = fade(y); \r\n            <span style=\"color:blue\">float</span> w = fade(z); \r\n \r\n            <span style=\"color:blue\">int</span> A = permutations[X] &#43; Y, AA = permutations[A] &#43; Z, AB = permutations[A &#43; 1] &#43; Z, \r\n                B = permutations[X &#43; 1] &#43; Y, BA = permutations[B] &#43; Z, BB = permutations[B &#43; 1] &#43; Z; \r\n \r\n            <span style=\"color:blue\">return</span> lerp(w, lerp(v, lerp(u, grad(permutations[AA], x, y, z), \r\n                                     grad(permutations[BA], x - 1, y, z)), \r\n                             lerp(u, grad(permutations[AB], x, y - 1, z), \r\n                                     grad(permutations[BB], x - 1, y - 1, z))), \r\n \r\n                             lerp(v, lerp(u, grad(permutations[AA &#43; 1], x, y, z - 1), \r\n                                     grad(permutations[BA &#43; 1], x - 1, y, z - 1)), \r\n                             lerp(u, grad(permutations[AB &#43; 1], x, y - 1, z - 1), \r\n                                     grad(permutations[BB &#43; 1], x - 1, y - 1, z - 1)))); \r\n        } \r\n \r\n        <span style=\"color:blue\">public</span> <span style=\"color:blue\">float</span> noise2d(<span style=\"color:blue\">float</span> x, <span style=\"color:blue\">float</span> y) \r\n        { \r\n            <span style=\"color:blue\">return</span> noise3d(x, y, 0f); \r\n        } \r\n    } \r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>It outputs 0.0F all the time, and I have no idea why. &nbsp;Hopefully you guys can successfully implement this in the next commit. :)</p>\r\n",
+    "PostedDate": "2011-07-05T18:32:55.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "637836",
+    "ThreadId": "264014",
+    "Html": "<p>Good to hear from one of our old IRC mates ;)&nbsp;</p>\r\n<p>Thats definitely worth investigating ! But not now, we are already overwhelmed by all our own super secret gameplay additions and all the bugs they introduce in our engine ;)</p>\r\n<p>By the way, followers of the opensource techcraft will be the first to know when we will release something !</p>",
+    "PostedDate": "2011-07-05T19:17:15.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "637969",
+    "ThreadId": "264014",
+    "Html": "<p>Hi Tony,</p>\r\n<p>The newtake.model.terrain namespace has a 3d simplex method:</p>\r\n<pre><span>public</span> <span>static</span> <span>float</span> noise(<span>float</span> xin, <span>float</span> yin, <span>float</span> zin)</pre>\r\n<pre><br /></pre>\r\n<p>In your code the noise2d method parses a zero float for z. Is that what you refer to as returning 0.0f from the noise3d method?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-07-06T02:22:11.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "638268",
+    "ThreadId": "264014",
+    "Html": "<p>Enomi: Can't wait for the day you guys announce them. :)</p>\r\n<p>Jacoo: Not exactly. &nbsp;At first, I just decided that I'd just use 3d noise for my 2d noise, but just setting the z value to 0. &nbsp;However, when that failed (it outputted 0), I decided to see if the noise3d function even worked. &nbsp;When I tried noise3d(args[0]...), it still put out 0. &nbsp;So I'm really confused about this. :P</p>",
+    "PostedDate": "2011-07-06T10:46:13.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "638392",
+    "ThreadId": "264014",
+    "Html": "<p>Hi,</p>\r\n<p>im just curious but did you try replacing the randomness in the permutations with ken's array, just to see if it makes a difference?</p>",
+    "PostedDate": "2011-07-06T14:17:52.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "638393",
+    "ThreadId": "264014",
+    "Html": "<p>Yup, I did.</p>\n<p>Still 0. :(</p>\n<p>&nbsp;</p>\n<p>I've also tried the old fashioned&nbsp;<br />\n<pre>for(int i = 0; i &lt; 256; i++)\n    permutations[i] = permuations[i + 256] = i;</pre>\n&nbsp;</p>",
+    "PostedDate": "2011-07-06T14:20:49.253-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812461",
+    "ThreadId": "264014",
+    "Html": "<p>that could be related to that normal perlin noise returns 0 for int values. More information over;&nbsp;<a href=\"http://www.programmersheaven.com/2/perlin\">http://www.programmersheaven.com/2/perlin</a></p>\r\n<p style=\"padding-left: 30px;\">Another disadvantage that might not be obvious is that the noise function always returns 0 at integer values. Although this is not noticable on static images it is very apparent on animated images. I made a 3D perlin noise function and rendered it on a 2D texture map while moving along the z-axis, this had the effect of a pulsating map. This because every time the z value was integer there where many values around 0, while the z where between integer values there where more randomness.</p>",
+    "PostedDate": "2012-03-19T05:43:02.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812471",
+    "ThreadId": "264014",
+    "Html": "<p>and I'm really not sure if perlin noise is better in complexity (even in lower dimensions) -&nbsp;<a href=\"http://en.wikipedia.org/wiki/Simplex_noise\">http://en.wikipedia.org/wiki/Simplex_noise</a></p>",
+    "PostedDate": "2012-03-19T06:01:36.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "906705",
+    "ThreadId": "393874",
+    "Html": "\r\n<p>As one of the original devs on this engine, I'd like to put a question on this discussion forum to ask any followers simply what features would be of interest to you to see added to this engine.</p>\r\n<p>We have seen 3 commercial games released so far (as of 31st Aug 2012) using this engine, which is very rewarding to see. It proves that the engine is of a level where further code can quickly result in interesting and fun games, both for PC and XBOX360.&nbsp;</p>\r\n<p>So I hope we get a few replies on this post, and see if we can make this engine even better!</p>\r\n<p>Thanks to all who continue to follow this project, which isn't dead by the way.</p>\r\n",
+    "PostedDate": "2012-08-31T00:09:31.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "910724",
+    "ThreadId": "393874",
+    "Html": "\r\n<ul>\r\n<li>MonoGame compatibility </li><li>ParticleEffect added since its missing in the source makes the example useless\r\n</li></ul>\r\n<ul>\r\n<li>Voxel engine separate from game logic makes it less confusing to jump into maybe an API to plug it into a game (I tried ArdorCraft it was a breeze to get setup)\r\n</li></ul>\r\n<p>All these would be great and hopefully sometime in the future will be added.&nbsp; Unfortunately I won't be able to be back to comment for awhile.</p>\r\n",
+    "PostedDate": "2012-09-10T21:27:40.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "910750",
+    "ThreadId": "393874",
+    "Html": "<p>MonoGame compatibility is one area that would allow this engine to move cross platform, so is definitely a viable feature. In preparation of that, I think parts of the engine and game logic need to be split as you mention.</p>\r\n<p>ParticleEffect could be added quite easily.</p>\r\n<p>Let's see if there are any further comments first, before investigating whats needed to make such changes.</p>",
+    "PostedDate": "2012-09-11T00:02:09.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "913319",
+    "ThreadId": "393874",
+    "Html": "\r\n<p>What would be realy nice would be a class-separation for blocks like in the source of Minecraft, so you can actually create a separate class for each blocktype, but got a base-class (obvious) &quot;Block&quot; which can be inherited for complete new blocktypes.</p>\r\n",
+    "PostedDate": "2012-09-16T14:57:16.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

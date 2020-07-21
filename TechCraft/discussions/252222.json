@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "590517",
+    "ThreadId": "252222",
+    "Html": "<p>All the great work going on here has inspired me to have a play to see if we could support WP7 (since i've just got a new phone). Everything compiles fine under the Reach profile if you modify the effects to compile with shader model 2 (no complaints about  vertex buffer sizes so far but that may be an issue), but on its own thats no real use given that the current version of XNA on WP7 doesn't support custom shaders.</p>\n<p>I've got basic block rendering working fine with BasicEffect and I think i've got a sneaky way to emulate lighting by using the DualTextureEffect with the second texture just being a black image with the alpha channel gradually increasing in one direction  which would allow the block lighting to be emulated by setting the texture coordinates for the 2nd texture to the correct place in the image for the light amount.&nbsp;</p>\n<p>Since the WorldRenderer/ChunkRenderer/VertexBlockRenderer for WP7 are going to be very different than the current implementations and WP7 is unlikely to be able to support all the final features in the main engine - What are your thoughts on creating interfaces for IWorldRenderer/IChunkRenderer/IVertexBlockRenderer  so we can have different implementations for different platforms? - Enomi's new code structure would make this very easy.</p>\n<p>It would also require some minor rejigging of the content to move the shaders into a non WP7 content project since they won't compile for that platform.</p>\n<p>Anyway i'll try and get a proof of concept working this weekend and create a fork for people to have a play with.</p>",
+    "PostedDate": "2011-04-01T16:23:54.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590539",
+    "ThreadId": "252222",
+    "Html": "\r\n<p>Cool. I m glad my refactoring talents inspire so much talented people! </p>\r\n",
+    "PostedDate": "2011-04-01T17:52:52.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590551",
+    "ThreadId": "252222",
+    "Html": "<p>Just got the dualtextureeffect lighting working - just applies a random light to each cube face at the moment.</p>\n<p>edit - [File removed see later post for latest version]</p>\n<p>Hopefully i'll have a version for WP7 tomorrow - dunno what the performance will be like, but i'm off to bed now.</p>",
+    "PostedDate": "2011-04-01T18:42:46.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590599",
+    "ThreadId": "252222",
+    "Html": "<p>I was looking at ambient occlusion before, and using the dual texture effect. This is a great idea.</p>\n<p>The code from the mentioned dropbox works fine. Thanks for the POC, i will have a play with it.</p>\n<p>&nbsp;</p>\n<p>And the idea of interfaces for the renderer sounds good too. Im looking at different terrain generation, and IChunkBuilder at the moment.</p>",
+    "PostedDate": "2011-04-02T01:46:22.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590602",
+    "ThreadId": "252222",
+    "Html": "<p>I was thinking about doing a kind of fake AO while i was doing the lighting - as long as you passed in some extra information to the BlockFaceRenderer about the surrounding blocks you could do the AO and lighting by having a texturelibrary of shades with the AO effect prebaked in as well, although it may be better to use a SSAO post process effect in the main engine if we also want to implement things like colored lighting etc.</p>",
+    "PostedDate": "2011-04-02T02:27:16.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590607",
+    "ThreadId": "252222",
+    "Html": "<p>Exactly that, i was thinking of faking AO using a dual texture.</p>\r\n<p>Is this something you are thinking of adding in this weekend too?</p>",
+    "PostedDate": "2011-04-02T02:37:10.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590636",
+    "ThreadId": "252222",
+    "Html": "<p>I'll have a play around and give it a go, should be very similar to what i'm doing anyway.</p>\n<p>edit - The code above actually works pretty much as is on windows phone - remove the original techcraft projects create a copy of the newdirection project for wp7 - remove the solid block shader, the serializable attributes on the vertex defenitions and the using statements which the compiler moans about and it runs fine....well apart from the fact that it's almost impossible to control, but i'll read up on wp7 this afternoon and put some proper controls in.</p>",
+    "PostedDate": "2011-04-02T05:18:56.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590649",
+    "ThreadId": "252222",
+    "Html": "<p>Ok latest demo is here</p>\n<p>http://dl.dropbox.com/u/9584488/TechcraftWP7.zip</p>\n<p>video of it in action here</p>\n<p><a href=\"http://www.youtube.com/watch?v=VED0vThI4wQ\">http://www.youtube.com/watch?v=VED0vThI4wQ</a></p>\n<p>This is just the WP7 project - i've added virtual thumbstick support from the App Hub sample, and moved the camera to a nicer start location.&nbsp;Tap in the upper area of the screen to build - some issues with DoubleTap at the moment so no digging.</p>\n<p>It seems to run sweet - will play around with fake AO later. I'm also going to investigate whether i can do an http comet (<a href=\"http://en.wikipedia.org/wiki/Comet_(programming)\">http://en.wikipedia.org/wiki/Comet_(programming)</a>) connection from WP7  which would be needed for networking since the phone only supports http connections - might be horribly laggy for multiplayer tho but v. cool if it works. Perhaps we could do a free creative mode style minecraft on the phone to promote the engine ;)</p>",
+    "PostedDate": "2011-04-02T06:52:47.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "607232",
+    "ThreadId": "252222",
+    "Html": "<p>Hi,</p>\r\n<p>I was hoping to try and help with the WP7 Techcraft project however the dropbox is 404 now and I can't seem to locate the right fork. Can someone point me in the right direction :)?</p>",
+    "PostedDate": "2011-05-04T09:13:43.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "607843",
+    "ThreadId": "252222",
+    "Html": "Did you finally find the experimental WP7 zip ? We are not developing<br>\r\nthis currently but if you want to work on your own wp7 fork, i can<br>\r\nsend you the zip, just email me at enomi.enomi gmail , ill send you<br>\r\nthe zip in reply .",
+    "PostedDate": "2011-05-05T08:03:18.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "676041",
+    "ThreadId": "252222",
+    "Html": "<p>Anyone still have the zip for this? &nbsp; The dropbox link is dead.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2011-09-23T15:13:47.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

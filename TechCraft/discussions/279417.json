@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "698006",
+    "ThreadId": "279417",
+    "Html": "\r\n<p>Hi, I have no idea how to make that rock is not a half block.</p>\r\n<p>I want it to be a full block like grass, dirt, leaves etc.</p>\r\n<p>Where can I change this? I searched for it about 50 times and I've nothing found.</p>\r\n",
+    "PostedDate": "2011-11-14T11:12:02.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702404",
+    "ThreadId": "279417",
+    "Html": "<p>NewTake/view/blocks/blockinformation.cs</p>\r\n<pre><pre><span style=\"white-space: pre;\">\t<pre>        <span>public</span> <span>static</span> <span>bool</span> IsHalfBlock(BlockType type)\r\n        {\r\n            <span>if</span> (type == BlockType.Rock) <span>return</span> <span>true</span>;\r\n            <span>return</span> <span>false</span>;\r\n        }</pre>\r\n</span></pre>\r\n<br /></pre>",
+    "PostedDate": "2011-11-23T08:04:13.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1028754",
+    "ThreadId": "439866",
+    "Html": "I made over 100 blocks and want to just play but cant save the game! Im not the greatest at coding but i know bits of many types! I trying to put this in and keep having errors with game1.cs \r<br />\n<br />\n<a href=\"http://robotfootgames.com/2011/05/savingloading-using-easystorage-with-xna-4-0/\" rel=\"nofollow\">http://robotfootgames.com/2011/05/savingloading-using-easystorage-with-xna-4-0/</a>\r<br />\n<br />\nany idea on a simple save and load code?<br />\n",
+    "PostedDate": "2013-04-10T17:16:46.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1033213",
+    "ThreadId": "439866",
+    "Html": "Here is what I do to save a map. I created this class.<br />\n<pre><code>using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing Microsoft.Xna.Framework;\n\nnamespace TechCraftEngine.WorldEngine\n{\n    public class BlockSavable\n    {\n        public int BlockTypeSimple\n        {\n            get;\n            set;\n        }\n\n        public Vector3 Position\n        {\n            get;\n            set;\n        }\n    }\n}\n</code></pre>\n\nThen I added this method to the World class.<br />\n<pre><code>        public List&lt;BlockSavable&gt; getSavableBlocks()\n        {\n            List&lt;BlockSavable&gt; blocksSavable = new List&lt;BlockSavable&gt;();\n\n            foreach (Region r in _regions)\n            {\n                for (int x = 0; x &lt; r.Blocks.GetLength(0); x++) \n                {\n                    for (int y = 0; y &lt; r.Blocks.GetLength(1); y++) \n                    {\n                        for (int z = 0; z &lt; r.Blocks.GetLength(2); z++) \n                        {\n                            if (r.Blocks[x, y, z] != BlockType.None)\n                            {\n                                BlockSavable blockSavable = new BlockSavable();\n                                blockSavable.BlockTypeSimple = (int)r.Blocks[x, y, z];\n                                blockSavable.Position = new Vector3(x, y, z);\n                                blocksSavable.Add(blockSavable);\n                            }\n                        }\n                    }\n                }\n            }\n            return blocksSavable;\n        }</code></pre>\n\nThen to save and load, I use something like this..<br />\n<pre><code>        public static void SaveBlocks(List&lt;BlockSavable&gt; blocks)\n        {\n            XmlSerializer serializer = new XmlSerializer(typeof(Level));\n            TextWriter textWriter = new StreamWriter(@&quot;C:\\tests\\blocks.xml&quot;);\n            serializer.Serialize(textWriter, blocks);\n            textWriter.Close();\n        }\n\n        public static List&lt;BlockSavable&gt; LoadBlocks()\n        {\n            XmlSerializer deserializer = new XmlSerializer(typeof(List&lt;BlockSavable&gt;));\n            TextReader textReader = new StreamReader(@&quot;C:\\tests\\blocks.xml&quot;);\n            List&lt;BlockSavable&gt; blocks;\n            blocks = (List&lt;BlockSavable&gt;)deserializer.Deserialize(textReader);\n            textReader.Close();\n\n            return blocks;\n        }</code></pre>\n\n",
+    "PostedDate": "2013-04-19T14:23:49.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

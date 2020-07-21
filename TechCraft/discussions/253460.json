@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "595521",
+    "ThreadId": "253460",
+    "Html": "<p>Here are the biome types i think we could use:</p>\n<p>&nbsp;&nbsp;&nbsp; public enum BiomeType : byte<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; None = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; Tundra <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tundra_Alpine = 1,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tundra_Artic = 2,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; Grassland<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grassland_Savanna = 3,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grassland_Temperate = 4,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; Forest<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forest_Tropical = 5,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forest_Temperate = 6,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forest_Taiga = 7,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; Desert<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desert_Subtropical = 8,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desert_Semiarid = 9,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desert_Coastal = 10,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desert_Cold = 11,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; Marine<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marine_Ocean = 12,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marine_CoralReef = 13,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marine_Estuary = 14,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; Freshwater<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Freshwater_Lake = 15,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Freshwater_River = 16,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Freshwater_Wetland = 17,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Custom = 18,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAXIMUM = 19<br />&nbsp;&nbsp;&nbsp; }</p>",
+    "PostedDate": "2011-04-11T13:40:06.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595524",
+    "ThreadId": "253460",
+    "Html": "<p>First, I looked at Whittaker's definitions&nbsp; &nbsp;(<a href=\"http://en.wikipedia.org/wiki/Biomes#Whittaker.27s_Biome-type_Classification_Scheme\">http://en.wikipedia.org/wiki/Biomes#Whittaker.27s_Biome-type_Classification_Scheme</a>)&nbsp; and made some changes to group them.&nbsp; The Custom BIOME is for eventual external settings, so that it can be formed by external variables.</p>\r\n<p>We will need more block types, in particular marine types for coral reefs.</p>",
+    "PostedDate": "2011-04-11T13:44:59.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "596640",
+    "ThreadId": "253460",
+    "Html": "<p>tell me wich type you need, + specificity for texture, and if you need normal map or such</p>",
+    "PostedDate": "2011-04-13T08:10:58.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "596857",
+    "ThreadId": "253460",
+    "Html": "<p>sure.</p>\r\n<p>what i think i will need, are (after enomis recommendation) examples of fortune's voronoi algorithm in c#. I need to make sure that its licensed as public domain so that i can recode it into the techcraft code.</p>\r\n<p>Voronoi diagrams would allow me to generate textures, for coral reefs etc directly in the engine. This allows for almost infinite variations of coral, patterns and colour.&nbsp;</p>\r\n<p>Also, if anyone can find some good uses of perlin2d or 3d for terrain generation, that would be appreciated also. im specifically interested in examples with 4th or higher octaves.</p>",
+    "PostedDate": "2011-04-13T14:57:34.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "596863",
+    "ThreadId": "253460",
+    "Html": "<p>Here's an example of coral, which resembles a voronoi diagram:</p>\n<p><a href=\"http://www.gommadesign.com/wp-content/uploads/2011/02/concept-01.jpg\">http://www.gommadesign.com/wp-content/uploads/2011/02/concept-01.jpg</a></p>",
+    "PostedDate": "2011-04-13T15:03:45.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

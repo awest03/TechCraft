@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "518267",
+    "ThreadId": "233763",
+    "Html": "\r\n<p>Is there a chance we could get this built on the Sunburn Framework? I don't have Pro and won't purchase it just to try this demo, but I would really love to see it in action.</p>\r\n",
+    "PostedDate": "2010-11-06T16:55:26.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "518729",
+    "ThreadId": "233763",
+    "Html": "\r\n<p>This version doesn't use sunburn at all - I removed the sunburn lighting so that there were no 3rd party dependencies for this release.</p>\r\n",
+    "PostedDate": "2010-11-08T05:45:32.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526543",
+    "ThreadId": "233763",
+    "Html": "\r\n<p>Hi - I'm having the same problem when trying to compile. You mentioned a version with no sunburn lighting but the only code I can see on here is from Nov. 4th. Is there another update that I'm missing?</p>\r\n<p>Thanks.</p>\r\n",
+    "PostedDate": "2010-11-24T09:56:58.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "567579",
+    "ThreadId": "233763",
+    "Html": "<p>with vse 2008 / xna 3.1 there is just a warning \"The referenced component 'SynapseGaming-SunBurn-Pro-Processors' could not be found.&nbsp;&nbsp;\" but it works fine, its not needed by the code !</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-02-16T19:42:18.337-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

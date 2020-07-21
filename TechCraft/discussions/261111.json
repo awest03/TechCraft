@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "626613",
+    "ThreadId": "261111",
+    "Html": "\r\n<p>Hi Guys,</p>\r\n<p>I thought it would be cool to add a visible sun to the game, so I have had a go at adding a &quot;lens flare&quot; effect to the game, I used the xna lens flare sample here:-&nbsp;<a href=\"http://create.msdn.com/en-US/education/catalog/sample/lens_flare\">http://create.msdn.com/en-US/education/catalog/sample/lens_flare</a>&nbsp;-\r\n it's pretty straightforward as it's a DrawableGameComponent</p>\r\n<p>The problem is -even though I am setting the Sun Position of the lens flare effect to the World.SunPos (current position of the sun in the world) - the lens flare doesn't move accross the sky like the sun should, instead it just seems to stay at exactly\r\n the same place in the sky :(</p>\r\n<p>Any help with this would be much appreciated..</p>\r\n<p>Thanks you :)</p>\r\n",
+    "PostedDate": "2011-06-12T10:17:04.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626617",
+    "ThreadId": "261111",
+    "Html": "<p>Hi Darrell,</p>\n<p>Nice that you are trying new things with the engine.</p>\n<p>If you have added a Sun to the skydomerenderer, you should make sure that there are a rotationX and rotationY that are set in the identity matrix of the world parameter for the currentEffect. I looked at the example code, and the lightPosition will need its X and Y to be rotated I believe. It might be something similar to:</p>\n<p>double rotationX = projectedPosition.X * 360 / (2 * Math.PI);</p>\n<p>double rotationY = projectedPosition.Y * 360 / (2 * Math.PI);</p>\n<p>then you would need a new vector2 at least with x,-y (important that y is inverted) for the sunPos. You could base it on the timeOfDay in the Techcraft code. If you were to put the 2 lines above into Techcraft, you would need to use the _camera.Position instead of the projectedPosition.</p>\n<p>&nbsp;</p>\n<p>We're trying to encourage people to fork the code, and have a go at implementing something new to the engine. If you cant get it completely working, fork the source, and push your code. Time permitting, I can take a look and see where you might need to change the code.</p>\n<p>&nbsp;</p>",
+    "PostedDate": "2011-06-12T10:31:44.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626635",
+    "ThreadId": "261111",
+    "Html": "<p>Thanks for your help Jacoo,</p>\r\n<p>I haven't added a sun to the skydome yet, I am just having fun getting the lens flare pp effect working first - Also I should mention I am using a \"post process manager\" component (found here:&nbsp;<a href=\"http://xna-uk.net/media/p/7486.aspx\">http://xna-uk.net/media/p/7486.aspx</a>) which might be useful for anyone out there looking to add pp effects to their game in a structured way.</p>\r\n<p>Unfortunately, my XNA powers are quite limited (non existent?), I'm still learning and am struggling with fundamentals such as matrix's and World's and camera's and projections and Identity's - so pretty much everything related to 3d games programming :) - because of this, I am having a hard time understanding your answer, so&nbsp;I think I will come back and revisit this issue once I have a better grasp of the fundamentals!</p>\r\n<p>I was hoping it was gonna be as easy as setting a simple \"Position\"&nbsp;parameter&nbsp;for the effect.. Nothing is ever simple :(</p>\r\n<p>Thanks though :)</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-06-12T11:56:15.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626640",
+    "ThreadId": "261111",
+    "Html": "<p>Hi Darrell,</p>\r\n<p>Thanks for the reply.</p>\r\n<p>the identity matrix will hold the information on where the object would be in the world. If you calculate it from the _camera.Position, any rotation or translation will rotate it and move it away from the camera. If you rotate the object, but dont translate, it will have a world position the same as the camera. So in the case of the example, it has a position away from the camera.Try then to add some Y amount to it, to see if it moves at all.</p>\r\n<p>The camera is usually what you see in the game window, and in TechCraft and the example, they are using a First Person camera.</p>\r\n<p>A simple PostProcessor could be made in TechCraft. In the draw method, it would be a new draw method just before base.draw in the game1.draw method. A simple rendertarget2D of the viewport and apply some shader effect. There is a little work to do with quads, too.</p>\r\n<p>Again, once there is some code submitted from people, and hopefully activity, the open source version of TechCraft here on CodePlex might have new code committed also.</p>",
+    "PostedDate": "2011-06-12T12:20:36.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "627711",
+    "ThreadId": "261111",
+    "Html": "<p>Hi Thanks again Jacoo,</p>\n<p>Well - I gave it a bit more work tonight based on what you have said.. &nbsp;I set the \"LightPosition\" of the lens effect to be the current World.SunPos * -1 and the lens effect then moves accross the sky like a sun would, starting at the horizon and setting  at the opposite horizon!</p>\n<p>However - when it sets at the horizon it's well into night mode by that point so it looks silly there being a sun in the sky - also the sun immediately re-appears at the opposite horizon - so there is never a period where it is not in the sky! :(</p>\n<p>If i create a branch and check this stuff in - would you be able to have a look at some point - I think I need help with calculating the SunPos based on the time of day - techcraft does this but for some reason this makes the sun behave oddly - when used with the lens effect :(</p>",
+    "PostedDate": "2011-06-14T12:24:32.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "627744",
+    "ThreadId": "261111",
+    "Html": "<p>Hi Darrell,</p>\r\n<p>Sure, I'll take a look at your fork. It might take a day or two until I can get a reply, as I'm busy with other things for a while.</p>",
+    "PostedDate": "2011-06-14T13:10:12.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "595075",
+    "ThreadId": "253348",
+    "Html": "\r\n<p>Hi guys,</p>\r\n<p>I've recently found out about this engine, and i must say, it's awesome!<br>\r\nIn fact, I've been basing some code off of your engine.</p>\r\n<p>However, when I started using your selection block code, something wrong happened.<br>\r\nInstead of being transparent, the block becomes white!</p>\r\n<p>Can you guys help me with this?</p>\r\n<p>I have created a thread on apphub too at: <a href=\"http://forums.create.msdn.com/forums/p/80252/485541.aspx#485541\">\r\nhttp://forums.create.msdn.com/forums/p/80252/485541.aspx#485541</a>&nbsp;(it has more information)</p>\r\n<p><a href=\"http://forums.create.msdn.com/forums/p/80252/485541.aspx#485541\"></a>Thanks,</p>\r\n<p>Tony&nbsp;</p>\r\n",
+    "PostedDate": "2011-04-10T22:14:17.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595096",
+    "ThreadId": "253348",
+    "Html": "<p>Great that you are interested in this project, and using the code!</p>\r\n<p>After helping you on IRC with the problem, it was simply to change the samplerstate to Linearwrap.</p>\r\n<p>Don't forget to send us screenshots or videos of your work in progress :) Always interested to see what others are doing with the code.</p>",
+    "PostedDate": "2011-04-10T23:14:58.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

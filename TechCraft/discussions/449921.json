@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1067965",
+    "ThreadId": "449921",
+    "Html": "I was just wondering if there is any progress towards making and updated version of NewTake available? \r<br />\n<br />\nThanks for all the hard work :)<br />\n",
+    "PostedDate": "2013-07-13T19:02:19.223-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070870",
+    "ThreadId": "449921",
+    "Html": "Development on the newtake engine kindof stalled - we hit various issues with the way the basic code works and the fact that we have day jobs. We did do some development in private which is unreleased but is probably more game specific and still has a lot of problems.\r<br />\n<br />\nOther commitments mean that we're unlikely to update this project...\r<br />\n<br />\nThe other guys are now developing XenoGalaxies which is Unity based\r<br />\n<a href=\"http://www.xenogalaxies.com/index.html\" rel=\"nofollow\">http://www.xenogalaxies.com/index.html</a>\r<br />\n<br />\nAnd i'm playing around with a completely separate engine written in SharpDX \r<br />\n<a href=\"https://www.youtube.com/watch?v=83anqiDMM2k&amp;feature=c4-overview&amp;list=UURn969FLd11z8q_XEboVyCA\" rel=\"nofollow\">https://www.youtube.com/watch?v=83anqiDMM2k&feature=c4-overview&list=UURn969FLd11z8q_XEboVyCA</a><br />\n",
+    "PostedDate": "2013-07-20T15:41:14.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1072558",
+    "ThreadId": "449921",
+    "Html": "Thanks for the reply - no worries on the newtake engine etc.    Nice work on the engine - so Sharp DX is worth looking into eh?  Ive started looking for something to replace XNA ...\r<br />\n<br />\nIve been keeping an eye on the XenoGalaxies :)  Definitely looks like its shaping up into something pretty cool\r<br />\n<br />\n<br />\n:)<br />\n",
+    "PostedDate": "2013-07-24T19:41:26.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1076350",
+    "ThreadId": "449921",
+    "Html": "Personally i love SharpDX especially the toolkit which is pretty much as easy to use as XNA, but still allows you to access the full underlying framework when you want.\r<br />\nIf you want cross platform support i'd look at Mono, or Synapse Gamings soon to be released Sunburn 2.1<br />\n",
+    "PostedDate": "2013-08-03T12:44:12.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
